@@ -1,0 +1,180 @@
+#realmeow-page {
+    .section-realmeow-superpower,
+    #realmeow-superpower {
+        background-color: $black;
+        position: relative;
+        height: 87.1354vw;
+        // Background
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        // Main Content
+        .main-content {
+            position: absolute;
+            top: 17%;
+            left: 0;
+            width: 100%;
+            z-index: 4;
+        }
+        // Wire Holder
+        .wire-element-holder {
+            position: absolute;
+            width: 29.5%;
+            height: 59.77286%;
+            top: 29.75%;
+            left: 35.15625%;
+            z-index: 2;
+        }
+        // Poser Holder
+        .power-listing-holder {
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            // background-color: rgba(red, 0.15);
+            // The Mold
+            .mold {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+                top: 0.5%;
+                left: 0;
+            }
+            .power-group {
+                color: $white;
+                position: absolute;
+                // Common inner elements
+                .decor,
+                .power-title,
+                .power-desc {
+                    position: absolute;
+                }
+                // Individual Styling elements
+                .power-title {
+                    // font-size: 24px;
+                    font-size: 17px;
+                    word-spacing: -.5px;
+                }
+                .decor {
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .power-desc {
+                    // font-size: 12px;
+                    font-size: 9px;
+                    line-height: 18px;
+                    white-space: nowrap;
+                }
+                // Individual Elements Styling
+                &#realmeow-sensor-power {
+                    width: 12%;
+                    height: 20%;
+                    top: 29%;
+                    left: 26.4%;
+                    .power-title {}
+                    .decor {
+                        top: 15%;
+                        width: 79%;
+                    }
+                    .power-desc {
+                        width: 65%;
+                        left: 9.7%;
+                        top: 20%;
+                    }
+                }
+                &#realmeow-radioactive-power {
+                    width: 12%;
+                    height: 17%;
+                    top: 36.75%;
+                    left: 65.35%;
+                    .power-title {}
+                    .decor {
+                        top: 18%;
+                        width: 65%;
+                    }
+                    .power-desc {
+                        width: 65%;
+                        left: 7%;
+                        top: 27%;
+                    }
+                }
+                &#realmeow-machine-power {
+                    width: 12%;
+                    height: 15%;
+                    top: 54.5%;
+                    left: 25.75%;
+                    .power-title {}
+                    .decor {
+                        top: 20.4%;
+                        width: 78.5%;
+                        left: 5.9%;
+                    }
+                    .power-desc {
+                        width: 75%;
+                        left: 15%;
+                        top: 31%;
+                    }
+                }
+                &#realmeow-star-contact-power {
+                    width: 12%;
+                    height: 18%;
+                    top: 56.5%;
+                    left: 65.4%;
+                    .power-title {}
+                    .decor {
+                        top: 25.5%;
+                        width: 65%;
+                        left: 0%;
+                    }
+                    .power-desc {
+                        width: 70%;
+                        left: 9.5%;
+                        top: 33%;
+                    }
+                }
+                &#realmeow-collection-power {
+                    width: 12%;
+                    height: 15%;
+                    top: 79.2%;
+                    left: 26.2%;
+                    .power-title {}
+                    .decor {
+                        top: 24.5%;
+                        width: 64%;
+                        left: 1.5%;
+                    }
+                    .power-desc {
+                        width: 70%;
+                        left: 9.5%;
+                        top: 37%;
+                    }
+                }
+                &#realmeow-gravity-power {
+                    width: 12%;
+                    height: 15%;
+                    top: 82.9%;
+                    left: 65.3%;
+                    .power-title {}
+                    .decor {
+                        top: 19%;
+                        width: 64%;
+                        left: .25%;
+                    }
+                    .power-desc {
+                        width: 70%;
+                        left: 7%;
+                        top: 28%;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-lg-screen} {}
+}

@@ -1,0 +1,78 @@
+#realmeow-page {
+    #realmeow-slogan-banner,
+    .section-realmeow-slogan-banner {
+        background-color: $black;
+        position: relative;
+        height: 65.4296875vw;
+        // Background Holder
+        .background-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            .realmeow-logo {
+                position: absolute;
+                width: 46.71875%;
+                top: 7.88%;
+                left: 26.5625%
+            }
+        }
+        // Rotating Effect Holder
+        .realmeow-rotating-effect {
+            z-index: 2;
+            position: absolute;
+            width: 23.9453125%;
+            top: 15.03%;
+            left: 49%;
+            .img-holder {
+                position: absolute;
+                width: 100%;
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+        // Slogan Listing
+        .slogan-listing {
+            position: absolute;
+            width: 29.453125%;
+            top: 23.03%;
+            left: 25%;
+            height: 62%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .slogan-item {
+                font-size: 110px;
+                white-space: nowrap;
+                font-weight: 600;
+                font-style: italic;
+                position: relative;
+                .main-txt {
+                    position: relative;
+                    z-index: 2;
+                }
+                .shadow-txt {
+                    position: absolute;
+                    top: 15px;
+                    -webkit-text-stroke: .5px rgba($white, 0.25);
+                    -webkit-text-fill-color: $black;
+                }
+            }
+        }
+    }
+    @media #{$information-lg-screen} {
+        #realmeow-slogan-banner,
+        .section-realmeow-slogan-banner {
+            // Slogan Listing
+            .slogan-listing {
+                .slogan-item {
+                    font-size: 74px;
+                }
+            }
+        }
+    }
+}

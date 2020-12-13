@@ -1,0 +1,83 @@
+#realmeow-page {
+    .section-realmeow-equipment,
+    #realmeow-equipment {
+        background-color: $black;
+        // Background
+        .background-holder {
+            width: 100%;
+            position: relative;
+            .section-title {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                left: 0;
+                .context {
+                    position: relative;
+                    z-index: 2;
+                }
+                .decor {
+                    position: absolute;
+                    width: 200px;
+                    left: 42.5%;
+                    top: -50px;
+                }
+            }
+        }
+        // Equipment Holder
+        .equipment-holder {
+            width: 1200px;
+            margin: auto;
+            max-width: 100%;
+            list-style: none;
+            .equipment-item {
+                margin-bottom: 60px;
+                position: relative;
+                cursor: pointer;
+                // Name
+                .equipment-name {
+                    position: absolute;
+                    width: 42.5%;
+                    left: 0;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    z-index: 2;
+                    .logo-holder {
+                        width: 220px;
+                        margin-bottom: 15px;
+                    }
+                    .equipment-context {
+                        font-weight: 600;
+                        font-size: 30px;
+                    }
+                }
+                // Image
+                .equipment-image {
+                    overflow: hidden;
+                    border-radius: 30px;
+                    img {
+                        transform-origin: 80% 50%;
+                        transition: all cubic-bezier(.31, .86, .48, .99) .5s;
+                    }
+                }
+                // Layout variation
+                &.layout-dark {
+                    .equipment-context {
+                        color: $white;
+                    }
+                }
+                &:hover {
+                    .equipment-image {
+                        img {
+                            -webkit-transform: scale(1.15);
+                            transform: scale(1.15);
+                            transition: all cubic-bezier(.31, .86, .48, .99) 2.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

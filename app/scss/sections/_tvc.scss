@@ -1,0 +1,14 @@
+#realmeow-page {
+    #realmeow-tvc-banner,
+    .section-realmeow-tvc-banner {
+        background-color: $black;
+        position: relative;
+        .play-btn-holder {
+            position: absolute;
+            width: 6%;
+            top: 41.5%;
+            left: 46%;
+            cursor: pointer;
+        }
+    }
+}

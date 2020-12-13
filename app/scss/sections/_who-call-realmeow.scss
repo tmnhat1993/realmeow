@@ -1,0 +1,42 @@
+#realmeow-page {
+    #who-call-realmeow,
+    .section-who-call-realmeow {
+        background-color: $black;
+        position: relative;
+        height: 103.125vw;
+        // Background Holder
+        .background-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 67.1875%;
+        }
+        // Main Content
+        .main-content {
+            position: absolute;
+            width: 100%;
+            top: 20.6%;
+            .realmeow-logo-holder {
+                margin: 5vw 0 2.1484375vw;
+                img {
+                    width: 15.625%;
+                }
+            }
+        }
+        // Profile
+        .realmeow-profile {
+            position: absolute;
+            width: 100%;
+            top: 58.71212%;
+            left: 0;
+            bottom: 0;
+            .profile-image {
+                position: absolute;
+                width: 51.5625%;
+                left: 24.25%;
+                top: 17.5%;
+            }
+        }
+    }
+}

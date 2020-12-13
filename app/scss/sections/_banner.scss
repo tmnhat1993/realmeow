@@ -1,0 +1,116 @@
+#realmeow-page {
+    #realmeow-banner,
+    .section-realmeow-banner {
+        background-color: $black;
+        height: 103.125vw;
+        position: relative;
+        // Effect Holder
+        .effect-holder {
+            position: absolute;
+            width: 44.84375%;
+            height: 85.8333%;
+            left: 27.34375%;
+            top: 9.2424%;
+            z-index: 3;
+            // Common image holder
+            .image-holder {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    display: block;
+                }
+            }
+            // Individual Layer
+            .shadow-1 {
+                z-index: 1;
+            }
+            .shadow-2 {
+                z-index: 2;
+            }
+            .main-img {
+                z-index: 3;
+            }
+        }
+        // Bacjground Holder
+        .background-holder {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('../img/banner/bg_text@2x.jpg');
+            background-size: cover;
+            background-position: center;
+            // Inside elements
+            .bg-logo,
+            .bg-left,
+            .bg-right,
+            .side-decor-right {
+                position: absolute;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .bg-logo {
+                width: 46.875%;
+                top: 4.54545%;
+                left: 26.5625%;
+            }
+            .side-decor-right {
+                width: 5%;
+                top: 30.45454%;
+                left: 69.375%;
+                z-index: 1;
+            }
+            .bg-right {
+                width: 3.75%;
+                left: 69.53125%;
+                top: 76.060%;
+                z-index: 2;
+            }
+            .bg-left {
+                width: 4.21875%;
+                top: 82.9545%;
+                left: 26.328125%;
+                z-index: 2;
+            }
+        }
+        // Decoration Holder
+        .decoration-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            // Common Decor Style Element
+            .decor-star {
+                position: absolute;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            // Individual Element
+            .star-1 {
+                width: 2.34375%;
+                left: 25.390625%;
+                top: 23.8636%;
+            }
+            .star-2 {
+                width: 1.25%;
+                left: 72.539%;
+                top: 16.742424%;
+            }
+        }
+    }
+}

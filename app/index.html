@@ -11,6 +11,8 @@
       </script>
     <![endif]-->
     <title>PixiJS demo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -20,13 +22,73 @@
         <!-- Banner -->
         <section class="section section-realmeow-banner" id="realmeow-banner" data-scroll>
             <!-- Effect Holder -->
-            <div class="effect-holder"></div>
+            <div class="effect-holder">
+                <!-- Shadow 1 -->
+                <div class="image-holder shadow-1">
+                    <picture>
+                        <source srcset="img/banner/shadow-1.png" media="(max-width: 1920px)">
+                        <img src="img/banner/shadow-1@2x.png" alt="">
+                    </picture>
+                </div>
+
+                <!-- Shadown 2 -->
+                <div class="image-holder shadow-2">
+                    <picture>
+                        <source srcset="img/banner/shadow-2.png" media="(max-width: 1920px)">
+                        <img src="img/banner/shadow-2@2x.png" alt="">
+                    </picture>
+                </div>
+
+                <!-- Main Image -->
+                <div class="image-holder main-img">
+                    <picture>
+                        <source srcset="img/banner/main-cat.png" media="(max-width: 1920px)">
+                        <img src="img/banner/main-cat@2x.png" alt="">
+                    </picture>
+                </div>
+            </div>
 
             <!-- Background Holder -->
-            <div class="background-holder"></div>
+            <div class="background-holder">
+                <!-- Logo Holder -->
+                <div class="bg-logo">
+                    <img src="img/realmeow-logo.svg" alt="">
+                </div>
+
+                <!-- Background Left -->
+                <div class="bg-left">
+                    <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 768px)">
+                    <source srcset="img/banner/background-left.png" media="(max-width: 1280px)">
+                    <img src="img/banner/background-left@2x.png" alt="">
+                </div>
+
+                <!-- Background Right -->
+                <div class="bg-right">
+                    <picture>
+                        <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 768px)">
+                        <source srcset="img/banner/backgroud-right.png" media="(max-width: 1280px)">
+                        <img src="img/banner/backgroud-right@2x.png" alt="">
+                    </picture>
+                </div>
+
+                <!-- Side Right Background Decoration -->
+                <div class="side-decor-right">
+                    <img src="img/banner/bg-txt-right.svg" alt="">
+                </div>
+            </div>
 
             <!-- Decoration -->
-            <div class="decoration-holder"></div>
+            <div class="decoration-holder">
+                <!-- Star 1 -->
+                <div class="decor-star star-1">
+                    <img src="img/star.svg" alt="">
+                </div>
+
+                <!-- Star 2 -->
+                <div class="decor-star star-2">
+                    <img src="img/star.svg" alt="">
+                </div>
+            </div>
         </section>
         <!-- Banner -END -->
 
@@ -34,15 +96,20 @@
         <!-- Intro Banner -->
         <section class="section section-realmeow-intro-banner" id="realmeow-intro-banner" data-scroll>
             <!-- Background -->
-            <div class="background-holder"></div>
+            <div class="background-holder img-holder bg-mode">
+                <picture>
+                    <source src="img/intro//bg.jpg" media="(max-width:1280px)">
+                    <img src="img/intro/bg@2x.jpg" alt="">
+                </picture>
+            </div>
 
             <!-- Main Content -->
             <div class="main-content">
-                <h2 class="section-title">Nền văn minh ngoài trái đất đã đến</h2>
+                <h2 class="section-title white-txt txt-center">Nền văn minh ngoài trái đất đã đến</h2>
             </div>
 
             <!-- Disclaimer -->
-            <div class="disclaimer-holder">
+            <div class="disclaimer-holder white-txt">
                 <p><b>Cảnh báo!</b></p>
                 <p>UFO đến từ hành tinh thời thượng đã sẵn sàng hạ cánh xuống trái đất</p>
             </div>
@@ -53,14 +120,38 @@
         <!-- Cover Listing Section -->
         <section class="section section-realmeow-cover-listing" id="realmeow-cover-listing" data-scroll>
             <!-- Background Holder -->
-            <div class="background-holder"></div>
+            <div class="background-holder img-holder bg-mode">
+                <picture>
+                    <source src="img/cover-listing/bg.jpg" media="(max-width:1280px)">
+                    <img src="img/cover-listing/bg@2x.jpg" alt="">
+                </picture>
+            </div>
 
             <!-- Cover Listing -->
             <div class="cover-listing-holder">
+                <!-- Cover List -->
                 <ul class="cover-list">
-                    <li class="cover-item"></li>
-                    <li class="cover-item"></li>
-                    <li class="cover-item"></li>
+                    <!-- Cover Item -->
+                    <li class="cover-item img-holder">
+                        <picture>
+                            <source src="img/cover-listing/andrew.jpg" media="(max-width:1280px)">
+                            <img src="img/cover-listing/andrew@2x.jpg" alt="">
+                        </picture>
+                    </li>
+                    <!-- Cover Item -->
+                    <li class="cover-item img-holder">
+                        <picture>
+                            <source src="img/cover-listing/realmeow.jpg" media="(max-width:1280px)">
+                            <img src="img/cover-listing/realmeow@2x.jpg" alt="">
+                        </picture>
+                    </li>
+                    <!-- Cover Item -->
+                    <li class="cover-item img-holder">
+                        <picture>
+                            <source src="img/cover-listing/dr-devourer.jpg" media="(max-width:1280px)">
+                            <img src="img/cover-listing/dr-devourer@2x.jpg" alt="">
+                        </picture>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -70,10 +161,17 @@
         <!-- TVC Banner -->
         <section class="section section-realmeow-tvc-banner" id="realmeow-tvc-banner" data-scroll>
             <!-- Background Holder -->
-            <div class="background-holder"></div>
+            <div class="background-holder img-holder">
+                <picture>
+                    <source src="img/tvc/bg.jpg" media="(max-width:1280px)">
+                    <img src="img/tvc/bg@2x.jpg" alt="">
+                </picture>
+            </div>
 
             <!-- Play Button -->
-            <div class="play-btn-holder"></div>
+            <div class="play-btn-holder img-holder play-modal-video" data-video-id="8NwFFVPjTZI">
+                <img src="img/tvc/play-btn.svg" alt="">
+            </div>
         </section>
         <!-- TVC Banner - END -->
 
@@ -81,53 +179,129 @@
         <!-- Who calling banner -->
         <section class="section section-who-call-realmeow" id="who-call-realmeow" data-scroll>
             <!-- Background Holder -->
-            <div class="background-holder"></div>
-
-            <!-- Realmeow Pic Holder -->
-            <div class="realmeow-image-holder"></div>
+            <div class="background-holder img-holder">
+                <picture>
+                    <source src="img/who-call-realmeow/bg.jpg" media="(max-width:1280px)">
+                    <img src="img/who-call-realmeow/bg@2x.jpg" alt="">
+                </picture>
+            </div>
 
             <!-- Main Content Holder -->
             <div class="main-content">
-                <h2 class="section-title">
+                <h2 class="section-title white-txt txt-center">
                     Ai đã gọi anh ấy đến đây?
                 </h2>
-                <div class="realmeow-logo-holder"></div>
-                <p class="desc">
-                    realmeow, đại sứ truyền thông văn hóa, đến từ hành tinh M58-2018828-S, cách Trái đất 63,2 triệu năm ánh sáng, những người tạo ra hành tinh này là người có óc sáng tạo cao và đầy sự sắc bén.
+                <div class="realmeow-logo-holder txt-center">
+                    <img src="img/realmeow-logo.svg" alt="">
+                </div>
+                <p class="desc white-txt txt-center">
+                    realmeow, đại sứ truyền thông văn hóa, đến từ hành tinh M58-2018828-S, cách <br class="mb-hide">Trái đất 63,2 triệu năm ánh sáng, những người tạo ra hành tinh này là người có óc<br class="mb-hide"> sáng tạo cao và đầy sự sắc bén.
                 </p>
             </div>
 
             <!-- Realmeow Profile -->
             <div class="realmeow-profile">
-                <h2 class="section-title">
+                <h2 class="section-title white-txt txt-center">
                     Sơ yếu lý lịch
                 </h2>
-                <div class="profile-image"></div>
+                <div class="profile-image img-holder">
+                    <picture>
+                        <source src="img/who-call-realmeow/card.jpg" media="(max-width:1280px)">
+                        <img src="img/who-call-realmeow/card@2x.jpg" alt="">
+                    </picture>
+                </div>
             </div>
         </section>
         <!-- Who calling banner - END -->
 
 
         <!-- Realmeow Slogan Banner -->
-        <section class="section section-realmeow-slogan-banner" data-scroll>
+        <section class="section section-realmeow-slogan-banner" id="realmeow-slogan-banner" data-scroll>
             <!-- Background -->
-            <div class="background-holder"></div>
+            <div class="background-holder">
+                <div class="realmeow-logo img-holder">
+                    <img src="img/realmeow-logo.svg" alt="">
+                </div>
+            </div>
 
             <!-- Realmeow Rotating Effect -->
             <div class="realmeow-rotating-effect">
-                <div class="image-holder image-1 active"></div>
-                <div class="image-holder image-2"></div>
-                <div class="image-holder image-3"></div>
-                <div class="image-holder image-4"></div>
-                <div class="image-holder image-5"></div>
-                <div class="image-holder image-6"></div>
+                <!-- Image Item -->
+                <div class="img-holder image-1 active">
+                    <picture>
+                        <source src="img/slogan/angle-1.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-1@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-2">
+                    <picture>
+                        <source src="img/slogan/angle-2.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-2@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-3">
+                    <picture>
+                        <source src="img/slogan/angle-3.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-3@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-4">
+                    <picture>
+                        <source src="img/slogan/angle-4.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-4@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-5">
+                    <picture>
+                        <source src="img/slogan/angle-5.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-5@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-6">
+                    <picture>
+                        <source src="img/slogan/angle-6.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-6@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-7">
+                    <picture>
+                        <source src="img/slogan/angle-7.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-7@2x.png" alt="">
+                    </picture>
+                </div>
+                <div class="img-holder image-8">
+                    <picture>
+                        <source src="img/slogan/angle-8.png" media="(max-width:1280px)">
+                        <img src="img/slogan/angle-8@2x.png" alt="">
+                    </picture>
+                </div>
             </div>
 
+            <!-- Slogan Listing -->
             <div class="slogan-listing">
-                <div class="slogan-item"></div>
-                <div class="slogan-item"></div>
-                <div class="slogan-item"></div>
-                <div class="slogan-item"></div>
+                <!-- Slogan Item -->
+                <div class="slogan-item gilroy">
+                    <div class="main-txt white-txt">Độc lập</div>
+                    <div class="shadow-txt">Độc lập</div>
+                </div>
+
+                <!-- Slogan Item -->
+                <div class="slogan-item gilroy">
+                    <div class="main-txt white-txt">Bứt phá</div>
+                    <div class="shadow-txt">Bứt phá</div>
+                </div>
+
+                <!-- Slogan Item -->
+                <div class="slogan-item gilroy">
+                    <div class="main-txt white-txt">Không sợ hãi</div>
+                    <div class="shadow-txt">Không sợ hãi</div>
+                </div>
+
+                <!-- Slogan Item -->
+                <div class="slogan-item gilroy">
+                    <div class="main-txt white-txt">Nhanh nhẹn</div>
+                    <div class="shadow-txt">Nhanh nhẹn</div>
+                </div>
             </div>
         </section>
         <!-- Realmeow Slogan Banner - END -->
@@ -136,66 +310,92 @@
         <!-- realmeow Super Power -->
         <section class="section section-realmeow-superpower" id="realmeow-superpower" data-scroll>
             <!-- Background -->
-            <div class="background"></div>
+            <div class="background img-holder bg-mode">
+                <picture>
+                    <source srcset="img/power/bg-laptop.jpg" media="(max-width: 1280px)">
+                    <source srcset="img/power/bg.jpg" media="(max-width: 1920px)">
+                    <img src="img/power/bg-2k.jpg" alt="">
+                </picture>
+            </div>
 
             <!-- Main Content -->
             <div class="main-content">
-                <h2 class="section-title">Siêu năng lực</h2>
+                <h2 class="section-title white-txt txt-center">Siêu năng lực</h2>
+            </div>
+
+            <!-- Wire Elements -->
+            <div class="wire-element-holder img-holder">
+                <img src="img/power/wire.svg" alt="">
             </div>
 
             <!-- Power Holder -->
             <div class="power-listing-holder">
+                <!-- <div class="mold img-holder">
+                    <img src="img/power/screen.jpg" alt="">
+                </div> -->
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-sensor-power">
-                    <div class="decor"></div>
+                    <div class="decor">
+                        <img src="img/power/frame-8.svg" alt="">
+                    </div>
                     <h3 class="power-title">Nhận biết siêu tần số</h3>
                     <p class="power-desc">
-                        Đôi tai siêu nhạy có khả năng nhận biết âm thanh trên dải tần số rộng từ 0,1Hz đến 1,000,000 Hz và có khả năng giảm tiếng ồn thích ứng.
+                        Đôi tai siêu nhạy có khả năng<br> nhận biết âm thanh trên dải tần<br> số rộng từ 0,1Hz đến 1,000,000<br> Hz và có khả năng giảm tiếng ồn<br> thích ứng.
                     </p>
                 </div>
 
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-radioactive-power">
-                    <div class="decor"></div>
+                    <div class="decor">
+                        <img src="img/power/frame-5.svg" alt="">
+                    </div>
                     <h3 class="power-title">Bức xạ năng lượng</h3>
                     <p class="power-desc">
-                        Các chùm tia đặc biệt từ mắt có thể biến đổi bất kỳ vật thể thành một vật thể có độ sắc nét với năng lượng bùng nổ.
+                        Các chùm tia đặc biệt từ mắt<br> có thể biến đổi bất kỳ vật<br> thể thành một vật thể có độ<br> sắc nét với năng lượng bùng<br> nổ.
                     </p>
                 </div>
 
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-machine-power">
-                    <div class="decor"></div>
+                    <div class="decor">
+                        <img src="img/power/frame-4.svg" alt="">
+                    </div>
                     <h3 class="power-title">Máy biến áp tối thượng</h3>
                     <p class="power-desc">
-                        Cơ thể linh hoạt có thể tiến hóa hình dạng tùy ý, khi bay cơ thể sẽ tiến hóa đôi cánh và giày sẽ có động cơ.
+                        Cơ thể linh hoạt có thể tiến hóa<br> hình dạng tùy ý, khi bay cơ thể<br> sẽ tiến hóa đôi cánh và giày sẽ<br> có động cơ.
                     </p>
                 </div>
 
                 <!-- Power Group -->
-                <div class="power-group" id="realmeow-start-contact-power">
-                    <div class="decor"></div>
+                <div class="power-group" id="realmeow-star-contact-power">
+                    <div class="decor">
+                        <img src="img/power/frame-1.svg" alt="">
+                    </div>
                     <h3 class="power-title">Truyền thông tin<br> qua các vì sao</h3>
                     <p class="power-desc">
-                        Bộ râu với cảm biến siêu nhạy có khả năng giao tiếp xuyên suốt nhiều năm ánh sáng và hiểu hơn về những thông tin mới nhất giữa các vì sao.
+                        Bộ râu với cảm biến siêu <br>nhạy có khả năng giao<br> tiếp xuyên suốt nhiều<br> năm ánh sáng và hiểu<br> hơn về những thông tin<br> mới nhất giữa các vì sao.
                     </p>
                 </div>
 
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-collection-power">
-                    <div class="decor"></div>
+                    <div class="decor">
+                        <img src="img/power/frame-2.svg" alt="">
+                    </div>
                     <h3 class="power-title">Bộ sưu tập đa chiều</h3>
                     <p class="power-desc">
-                        Túi kho báu là một bộ sưu tập vũ trụ phiên bản giới hạn.
+                        Túi kho báu là một bộ <br>sưu tập vũ trụ phiên bản<br> giới hạn.
                     </p>
                 </div>
 
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-gravity-power">
-                    <div class="decor"></div>
+                    <div class="decor">
+                        <img src="img/power/frame-9.svg" alt="">
+                    </div>
                     <h3 class="power-title">Thiết bị trọng lực</h3>
                     <p class="power-desc">
-                        Đôi chân của realmeow có thể tạo ra một trường hấp dẫn mạnh và hạ cánh tự do trên bề mặt của các hành tinh khác nhau.
+                        Đôi chân của realmeow<br> có thể tạo ra một trường<br> hấp dẫn mạnh và hạ cánh<br> tự do trên bề mặt của các<br> hành tinh khác nhau.
                     </p>
                 </div>
             </div>
@@ -209,45 +409,57 @@
             <div class="main-content">
                 <!-- Title -->
                 <div class="title-holder">
-                    <h2 class="section-title">Huyền thoại</h2>
-                    <div class="decor"></div>
+                    <h2 class="section-title white-txt txt-center">Huyền thoại</h2>
+                    <div class="decor img-holder">
+                        <img src="img/legend/highlight.svg" alt="">
+                    </div>
                 </div>
 
                 <!-- Legend Intro Layout -->
                 <div class="legend-intro-layout">
                     <!-- Image Column -->
-                    <div class="image-column"></div>
-
-                    <!-- Desc Column -->
-                    <div class="desc-column">
-                        <!-- desc group -->
-                        <div class="desc-group">
-                            <!-- Title -->
-                            <div class="intro-title-holder">
-                                <h4 class="group-subtitle">Người tạo ra</h4>
-                                <div class="realmeow-logo-holder"></div>
-                            </div>
-
-                            <!-- Desc -->
-                            <p class="desc">
-                                “Các nhân vật đều bắt đầu với một niềm đam mê. Xác định được niềm đam mê và những trở ngại mà nhân vật phải vượt qua để đạt được niềm đam mê đó, sẽ tạo nên một nhân vật với tính cách tuyệt vời cùng với đặc điểm nhận dạng riêng biệt. ”
-                            </p>
+                    <div class="image-column">
+                        <div class="img-holder mark-image">
+                            <img src="img/legend/mark.png" alt="">
                         </div>
+                        <div class="img-holder img-frame"></div>
                     </div>
 
                     <!-- Desc Column -->
-                    <div class="desc-column">
-                        <!-- desc group -->
+                    <div class="desc-column white-txt">
+                        <!-- Desc Column -->
                         <div class="desc-group">
                             <!-- Title -->
                             <div class="intro-title-holder">
-                                <h4 class="group-title">MARK A. WALSH</h4>
+                                <h4 class="group-sub-title">
+                                    <span class="content">Người tạo ra</span>
+                                </h4>
+                                <div class="realmeow-logo-holder img-holder">
+                                    <img src="img/realmeow-logo.svg" alt="">
+                                </div>
                             </div>
 
                             <!-- Desc -->
                             <p class="desc">
-                                Đạo diễn hoạt hình nổi tiếng thế giới Chỉ đạo hoạt hình của Finding Nemo, Nhà phát triển nhân vật của Monsters, Inc. Tư vấn sáng tạo của realme Design Studio
+                                “Các nhân vật đều bắt đầu với một niềm đam <br>mê. Xác định được niềm đam mê và những trở <br>ngại mà nhân vật phải vượt qua để đạt được <br>niềm đam mê đó, sẽ tạo nên một nhân vật với <br>tính cách tuyệt vời cùng với đặc
+                                điểm nhận dạng <br>riêng biệt. ”
                             </p>
+                        </div>
+
+                        <!-- Desc Column -->
+                        <div class="desc-group">
+                            <!-- desc group -->
+                            <div class="desc-group">
+                                <!-- Title -->
+                                <div class="intro-title-holder">
+                                    <h4 class="group-title">MARK A. WALSH</h4>
+                                </div>
+
+                                <!-- Desc -->
+                                <p class="desc">
+                                    Đạo diễn hoạt hình nổi tiếng thế giới <br>Chỉ đạo hoạt hình của Finding Nemo, Nhà phát <br>triển nhân vật của Monsters, Inc. <br>Tư vấn sáng tạo của realme Design Studio
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,11 +471,14 @@
         <!-- The Equipment -->
         <section class="section section-realmeow-equipment" id="realmeow-equipment" data-scroll>
             <!-- Background -->
-            <div class="background-holder"></div>
-
-            <!-- Main Content -->
-            <div class="main-content">
-                <h2 class="section-title">Trang thiết bị</h2>
+            <div class="background-holder img-holder">
+                <img src="img/equipment/top-bg.jpg" alt="">
+                <h2 class="section-title white-txt txt-center">
+                    <span class="context">Trang thiết bị</span>
+                    <div class="decor">
+                        <img src="img/equipment/highlight.svg" alt="">
+                    </div>
+                </h2>
             </div>
 
             <!-- Equipment Holder -->
@@ -273,26 +488,54 @@
 
                     <!-- Equipment Item -->
                     <li class="equipment-item layout-light">
-                        <div class="equipment-name"></div>
-                        <div class="equipment-image"></div>
+                        <div class="equipment-name">
+                            <div class="logo-holder img-holder">
+                                <img src="img/realmeow-logo-black.svg" alt="">
+                            </div>
+                            <div class="equipment-context">Hộp quà</div>
+                        </div>
+                        <div class="equipment-image img-holder bg-mode">
+                            <img src="img/equipment/gift-1.png" alt="">
+                        </div>
                     </li>
 
                     <!-- Equipment Item -->
                     <li class="equipment-item layout-dark">
-                        <div class="equipment-name"></div>
-                        <div class="equipment-image"></div>
+                        <div class="equipment-name">
+                            <div class="logo-holder img-holder">
+                                <img src="img/realmeow-logo.svg" alt="">
+                            </div>
+                            <div class="equipment-context">Áo hoodie</div>
+                        </div>
+                        <div class="equipment-image img-holder bg-mode">
+                            <img src="img/equipment/gift-2.png" alt="">
+                        </div>
                     </li>
 
                     <!-- Equipment Item -->
                     <li class="equipment-item layout-light">
-                        <div class="equipment-name"></div>
-                        <div class="equipment-image"></div>
+                        <div class="equipment-name">
+                            <div class="logo-holder img-holder">
+                                <img src="img/realmeow-logo-black.svg" alt="">
+                            </div>
+                            <div class="equipment-context">Áo thun</div>
+                        </div>
+                        <div class="equipment-image img-holder bg-mode">
+                            <img src="img/equipment/gift-3.png" alt="">
+                        </div>
                     </li>
 
                     <!-- Equipment Item -->
                     <li class="equipment-item layout-dark">
-                        <div class="equipment-name"></div>
-                        <div class="equipment-image"></div>
+                        <div class="equipment-name">
+                            <div class="logo-holder img-holder">
+                                <img src="img/realmeow-logo.svg" alt="">
+                            </div>
+                            <div class="equipment-context">Nón</div>
+                        </div>
+                        <div class="equipment-image img-holder bg-mode">
+                            <img src="img/equipment/gift-4.png" alt="">
+                        </div>
                     </li>
                 </ul>
             </div>
