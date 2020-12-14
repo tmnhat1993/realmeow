@@ -17,3 +17,18 @@
         }
     }
 }
+
+.blink-cursor {
+    &.stop-write {
+        animation: blink 800ms infinite;
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

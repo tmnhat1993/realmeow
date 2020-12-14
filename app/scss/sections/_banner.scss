@@ -46,7 +46,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background-image: url('../img/banner/bg_text@2x.jpg');
+            background-image: url("../img/banner/bg_text@2x.jpg");
             background-size: cover;
             background-position: center;
             // Inside elements
@@ -74,7 +74,7 @@
             .bg-right {
                 width: 3.75%;
                 left: 69.53125%;
-                top: 76.060%;
+                top: 76.06%;
                 z-index: 2;
             }
             .bg-left {
@@ -108,11 +108,19 @@
                 width: 2.34375%;
                 left: 25.390625%;
                 top: 23.8636%;
+                img {
+                    -webkit-animation: starRotating 7s linear infinite;
+                    animation: starRotating 7s linear infinite;
+                }
             }
             .star-2 {
                 width: 1.25%;
                 left: 72.539%;
                 top: 16.742424%;
+                img {
+                    -webkit-animation: starRotating 4s linear infinite;
+                    animation: starRotating 4s linear infinite;
+                }
             }
         }
     }
@@ -163,5 +171,16 @@
                 }
             }
         }
+    }
+}
+
+@keyframes starRotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
 }

@@ -8,56 +8,61 @@ import { pageListener } from "./utils";
 // Behavior
 import Common from "./_Common";
 
+// Sections
+import Banner from "./_Banner";
+import Intro from "./_Intro";
+
 export default class Home {
-    /* ===================================
-     *  CONSTRUCTOR
-     * =================================== */
-    constructor() {
-        // Page Listener
-        window.realmeowListener = new pageListener();
-        window.currentGameAvailable = 1;
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  constructor() {
+    // Page Listener
+    window.realmeowListener = new pageListener();
+    window.currentGameAvailable = 1;
 
-        // Ipad devices and below
-        window.IS_MOBILE = window.innerWidth >= 768 ? false : true;
-        $(window).on("resize", () => {
-            window.IS_MOBILE = window.innerWidth >= 768 ? false : true;
-        });
+    // Ipad devices and below
+    window.IS_MOBILE = window.innerWidth >= 768 ? false : true;
+    $(window).on("resize", () => {
+      window.IS_MOBILE = window.innerWidth >= 768 ? false : true;
+    });
 
-        // TweenMax
-        window.TweenMax = TweenMax;
+    // TweenMax
+    window.TweenMax = TweenMax;
 
-        // Common Behavior
-        let common = new Common();
+    // Common Behavior
+    let common = new Common();
 
-        // Page Sections Behavior
+    // Page Sections Behavior
+    let banner = new Banner();
+    let intro = new Intro();
 
+    // Bind Event
+    this.bindEvents();
+  }
 
-        // Bind Event
-        this.bindEvents();
-    }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+  bindEvents() {
+    this.ScrollOutSetup();
+  }
 
-    /* ===================================
-     *  EVENTS
-     * =================================== */
-    bindEvents() {
-        this.ScrollOutSetup();
-    }
-
-    /* ===================================
-     *  METHODS
-     * =================================== */
-    ScrollOutSetup() {
-        ScrollOut({
-            onShown: (el) => {
-                // use the web animation API
-                let elementID = $(el).attr("id");
-                realmeowListener.emit(`${elementID}-anim`);
-            },
-            onHidden: (el) => {
-                let elementID = $(el).attr("id");
-                realmeowListener.emit(`${elementID}-hide`);
-            },
-            threshold: 0.225,
-        });
-    }
+  /* ===================================
+   *  METHODS
+   * =================================== */
+  ScrollOutSetup() {
+    ScrollOut({
+      onShown: (el) => {
+        // use the web animation API
+        let elementID = $(el).attr("id");
+        realmeowListener.emit(`${elementID}-anim`);
+      },
+      onHidden: (el) => {
+        let elementID = $(el).attr("id");
+        realmeowListener.emit(`${elementID}-hide`);
+      },
+      threshold: 0.225,
+    });
+  }
 }
