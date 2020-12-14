@@ -39,4 +39,84 @@
             }
         }
     }
+    /* === RESPONSIVE === */
+    @media #{$information-md-screen} {
+        #who-call-realmeow,
+        .section-who-call-realmeow {
+            width: 1680px;
+            height: 1733px;
+            margin-left: calc((100% - 1680px)/2);
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        #who-call-realmeow,
+        .section-who-call-realmeow {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            // Background Holder
+            .background-holder {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+            }
+            // Main Content
+            .main-content {
+                width: 100%;
+                top: 14%;
+                .realmeow-logo-holder {
+                    margin: 15vw 0 5vw;
+                    img {
+                        width: 34.7222%;
+                    }
+                }
+                .desc {
+                    width: 40%;
+                    margin: auto;
+                    white-space: normal;
+                    color: #CBCBCB;
+                    font-size: 20px;
+                    line-height: 36px;
+                    text-align: center;
+                }
+            }
+            // Profile
+            .realmeow-profile {
+                .profile-image {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        #who-call-realmeow,
+        .section-who-call-realmeow {
+            // Main Content
+            .main-content {
+                .desc {
+                    width: 37%;
+                    font-size: 12px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media #{$information-sm-phone} {
+        #who-call-realmeow,
+        .section-who-call-realmeow {
+            // Main Content
+            .main-content {
+                .desc {
+                    width: 40%;
+                    font-size: 11px;
+                    line-height: 21px;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

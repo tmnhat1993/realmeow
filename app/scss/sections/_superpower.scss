@@ -67,8 +67,7 @@
                     }
                 }
                 .power-desc {
-                    // font-size: 12px;
-                    font-size: 9px;
+                    font-size: 12px;
                     line-height: 18px;
                     white-space: nowrap;
                 }
@@ -176,5 +175,345 @@
             }
         }
     }
-    @media #{$information-lg-screen} {}
+    /* === RESPONSIVE ===*/
+    @media #{$information-lg-screen} {
+        .section-realmeow-superpower,
+        #realmeow-superpower {
+            width: 1920px;
+            height: 1673px;
+            margin-left: calc((100% - 1920px)/2);
+            // Poser Holder
+            .power-listing-holder {
+                .power-group {
+                    .power-title {
+                        // font-size: 24px;
+                        font-size: 17px;
+                        word-spacing: -.5px;
+                    }
+                    .power-desc {
+                        font-size: 9px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-realmeow-superpower,
+        #realmeow-superpower {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            .background {
+                position: relative;
+            }
+            // Main Content
+            .main-content {
+                top: 5%;
+            }
+            // Wire Holder
+            .wire-element-holder {
+                width: 58.5%;
+                height: 63.54712%;
+                top: 12%;
+                left: 11%;
+            }
+            // Poser Holder
+            .power-listing-holder {
+                top: 0;
+                left: 0;
+                .power-group {
+                    // Individual Styling elements
+                    .power-title {
+                        // font-size: 24px;
+                        font-size: 24px;
+                        word-spacing: -.5px;
+                    }
+                    .decor {
+                        display: none;
+                    }
+                    .power-desc {
+                        font-size: 16px;
+                        line-height: 30px;
+                        white-space: normal;
+                        color: #6A6A6A;
+                    }
+                    // Individual Elements Styling
+                    &#realmeow-sensor-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 11.5%;
+                        left: 55%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 24%;
+                        }
+                    }
+                    &#realmeow-radioactive-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 25%;
+                        left: 55%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                    &#realmeow-machine-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 75.5%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 25%;
+                        }
+                    }
+                    &#realmeow-star-contact-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 34.7%;
+                        left: 55%;
+                        .power-title {
+                            font-size: 18px;
+                        }
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 13%;
+                        }
+                    }
+                    &#realmeow-collection-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 48.35%;
+                        left: 55%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                    &#realmeow-gravity-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 60%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        .section-realmeow-superpower,
+        #realmeow-superpower {
+            // Poser Holder
+            .power-listing-holder {
+                top: 0;
+                left: 0;
+                .power-group {
+                    // Individual Styling elements
+                    .power-title {
+                        // font-size: 24px;
+                        font-size: 13px;
+                        word-spacing: -.5px;
+                    }
+                    .decor {
+                        display: none;
+                    }
+                    .power-desc {
+                        font-size: 11px;
+                        line-height: 22px;
+                    }
+                    // Individual Elements Styling
+                    &#realmeow-sensor-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 11.5%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 24%;
+                        }
+                    }
+                    &#realmeow-radioactive-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 25%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                    &#realmeow-machine-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 75.5%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 25%;
+                        }
+                    }
+                    &#realmeow-star-contact-power {
+                        width: 47%;
+                        height: 10%;
+                        top: 34.7%;
+                        left: 53%;
+                        .power-title {
+                            font-size: 11px;
+                        }
+                        .power-desc {
+                            width: 88%;
+                            left: 0%;
+                            top: 13%;
+                        }
+                    }
+                    &#realmeow-collection-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 48.35%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                    &#realmeow-gravity-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 60%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-sm-phone} {
+        .section-realmeow-superpower,
+        #realmeow-superpower {
+            // Poser Holder
+            .power-listing-holder {
+                .power-group {
+                    // Individual Styling elements
+                    .power-title {
+                        // font-size: 24px;
+                        font-size: 12px;
+                        word-spacing: -.5px;
+                    }
+                    .decor {
+                        display: none;
+                    }
+                    .power-desc {
+                        font-size: 9px;
+                        line-height: 19px;
+                    }
+                    // Individual Elements Styling
+                    &#realmeow-sensor-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 11.5%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 28%;
+                        }
+                    }
+                    &#realmeow-radioactive-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 25%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 18%;
+                        }
+                    }
+                    &#realmeow-machine-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 75.5%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 25%;
+                        }
+                    }
+                    &#realmeow-star-contact-power {
+                        width: 45%;
+                        height: 10%;
+                        top: 34.7%;
+                        left: 53%;
+                        .power-title {
+                            font-size: 11px;
+                        }
+                        .power-desc {
+                            width: 88%;
+                            left: 0%;
+                            top: 28%;
+                        }
+                    }
+                    &#realmeow-collection-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 48.35%;
+                        left: 53%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                    &#realmeow-gravity-power {
+                        width: 40%;
+                        height: 10%;
+                        top: 60%;
+                        left: 10%;
+                        .power-title {}
+                        .power-desc {
+                            width: 100%;
+                            left: 0%;
+                            top: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

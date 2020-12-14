@@ -45,4 +45,64 @@
             }
         }
     }
+    /* === RESPONSIVE === */
+    @media #{$information-md-screen} {
+        .section-realmeow-cover-listing,
+        #realmeow-cover-listing {
+            width: 1680px;
+            height: 558px;
+            margin-left: calc((100% - 1680px) / 2);
+            // Cover Listing Holder
+            .cover-listing-holder {
+                // Cover List styling
+                .cover-list {
+                    grid-column-gap: 18px;
+                }
+            }
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-realmeow-cover-listing,
+        #realmeow-cover-listing {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding: 10vw 0;
+            .background-holder {}
+            // Cover Listing Holder
+            .cover-listing-holder {
+                position: relative;
+                .cover-list {
+                    grid-column-gap: 18px;
+                    grid-template-columns: 1fr;
+                    width: 66%;
+                    .cover-item {
+                        margin-bottom: 5vw;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        .section-realmeow-cover-listing,
+        #realmeow-cover-listing {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding: 15vw 0 10vw;
+            .background-holder {}
+            // Cover Listing Holder
+            .cover-listing-holder {
+                position: relative;
+                .cover-list {
+                    grid-template-columns: 1fr;
+                    width: 68.333%;
+                    .cover-item {
+                        margin-bottom: 8vw;
+                    }
+                }
+            }
+        }
+    }
 }

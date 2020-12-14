@@ -29,6 +29,11 @@
             margin: auto;
             max-width: 100%;
             list-style: none;
+            .equipment-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
             .equipment-item {
                 margin-bottom: 60px;
                 position: relative;
@@ -75,6 +80,156 @@
                             transform: scale(1.15);
                             transition: all cubic-bezier(.31, .86, .48, .99) 2.5s;
                         }
+                    }
+                }
+            }
+        }
+    }
+    /* === RESPONSIVE === */
+    @media #{$information-sm-screen} {
+        .section-realmeow-equipment,
+        #realmeow-equipment {
+            // Background
+            .background-holder {
+                .section-title {
+                    .decor {
+                        width: 10vw;
+                        left: 42.5%;
+                        top: -2.5vw;
+                    }
+                }
+            }
+            // Equipment Holder
+            .equipment-holder {
+                width: 1080px;
+                .equipment-item {
+                    margin-bottom: 42px;
+                    // Name
+                    .equipment-name {
+                        .logo-holder {
+                            width: 180px;
+                            margin-bottom: 12px;
+                        }
+                        .equipment-context {
+                            font-size: 26px;
+                        }
+                    }
+                    // Image
+                    .equipment-image {
+                        border-radius: 22px;
+                    }
+                }
+            }
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-realmeow-equipment,
+        #realmeow-equipment {
+            // Background
+            .background-holder {
+                margin-bottom: 5vw;
+                .section-title {
+                    .decor {
+                        width: 18vw;
+                        left: 35.5%;
+                        top: -4.5vw;
+                    }
+                }
+            }
+            // Equipment Holder
+            .equipment-holder {
+                padding: 0 30px;
+                .equipment-item {
+                    margin-bottom: 5vw;
+                    // Name
+                    .equipment-name {
+                        .logo-holder {
+                            width: 18vw;
+                            margin-bottom: 10px;
+                        }
+                        .equipment-context {
+                            font-size: 20px;
+                        }
+                    }
+                    // Image
+                    .equipment-image {
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        .section-realmeow-equipment,
+        #realmeow-equipment {
+            // Background
+            .background-holder {
+                margin-bottom: 5vw;
+                .section-title {
+                    .decor {
+                        width: 18vw;
+                        left: 35.5%;
+                        top: -4.5vw;
+                    }
+                }
+            }
+            // Equipment Holder
+            .equipment-holder {
+                padding: 0 30px;
+                .equipment-item {
+                    margin-bottom: 5vw;
+                    // Name
+                    .equipment-name {
+                        .logo-holder {
+                            width: 18vw;
+                            margin-bottom: 5px;
+                        }
+                        .equipment-context {
+                            font-size: 14px;
+                        }
+                    }
+                    // Image
+                    .equipment-image {
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-sm-phone} {
+        .section-realmeow-equipment,
+        #realmeow-equipment {
+            // Background
+            .background-holder {
+                margin-bottom: 5vw;
+                .section-title {
+                    .decor {
+                        width: 18vw;
+                        left: 35.5%;
+                        top: -4.5vw;
+                    }
+                }
+            }
+            // Equipment Holder
+            .equipment-holder {
+                padding: 0 15px;
+                .equipment-item {
+                    margin-bottom: 5vw;
+                    // Name
+                    .equipment-name {
+                        width: 39%;
+                        .logo-holder {
+                            width: 22vw;
+                            margin-bottom: 2px;
+                        }
+                        .equipment-context {
+                            font-size: 12px;
+                        }
+                    }
+                    // Image
+                    .equipment-image {
+                        border-radius: 12px;
                     }
                 }
             }

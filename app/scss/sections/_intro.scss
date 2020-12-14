@@ -26,4 +26,96 @@
             top: 64.3333%;
         }
     }
+    /* === RESPONSIVE === */
+    @media #{$information-lg-screen} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            // Disclaimer
+            .disclaimer-holder {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media #{$information-sm-screen} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            // Disclaimer
+            .disclaimer-holder {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    @media #{$information-sm-laptop} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            // Disclaimer
+            .disclaimer-holder {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            height: 122vw;
+            // Main Content
+            .main-content {
+                width: 100%;
+                top: 15%;
+            }
+            // Disclaimer
+            .disclaimer-holder {
+                left: 5%;
+                top: 66.93181%;
+                p {
+                    font-size: 18px;
+                    b {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            // Main Content
+            .main-content {
+                width: 100%;
+                top: 15%;
+            }
+            // Disclaimer
+            .disclaimer-holder {
+                width: 90%;
+                p {
+                    font-size: 12px;
+                    b {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-sm-phone} {
+        .section-realmeow-intro-banner,
+        #realmeow-intro-banner {
+            // Disclaimer
+            .disclaimer-holder {
+                width: 90%;
+                p {
+                    font-size: 11px;
+                    b {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }

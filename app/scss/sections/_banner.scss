@@ -83,6 +83,9 @@
                 left: 26.328125%;
                 z-index: 2;
             }
+            .bg-mobile {
+                display: none;
+            }
         }
         // Decoration Holder
         .decoration-holder {
@@ -110,6 +113,54 @@
                 width: 1.25%;
                 left: 72.539%;
                 top: 16.742424%;
+            }
+        }
+    }
+    /* === RESPONSIVE === */
+    @media #{$information-tablet} {
+        #realmeow-banner,
+        .section-realmeow-banner {
+            height: 172.2vw;
+            // Effect Holder
+            .effect-holder {
+                width: 72.91666%;
+                height: 81.935%;
+                left: 13.54166%;
+                top: 14.8387%;
+            }
+            // Bacjground Holder
+            .background-holder {
+                background-image: none;
+                // Inside elements
+                .bg-left,
+                .bg-right,
+                .side-decor-right {
+                    display: none;
+                }
+                .bg-logo {
+                    top: 11.129%;
+                    left: 6.25%;
+                    width: 87.2222%;
+                }
+                .bg-mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            // Decoration Holder
+            .decoration-holder {
+                // Individual Element
+                .star-1 {
+                    width: 5.5555%;
+                    left: 7.22222%;
+                    top: 52.0968%;
+                }
+                .star-2 {
+                    width: 1.25%;
+                    left: 72.539%;
+                    top: 16.742424%;
+                }
             }
         }
     }

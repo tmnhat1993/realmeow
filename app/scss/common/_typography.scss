@@ -53,12 +53,59 @@ body {
     .txt-center {
         text-align: center;
     }
-    @media (max-width: 1920px) {
+    /* === RESPONSIVE === */
+    @media #{$information-lg-screen} {
         .section-title {
             font-size: 52px;
         }
         .desc {
             font-size: 12px;
+        }
+    }
+    @media #{$information-md-screen} {
+        .section-title {
+            font-size: 46px;
+        }
+    }
+    @media #{$information-sm-screen} {
+        .section-title {
+            font-size: 39px;
+        }
+        .desc {
+            font-size: 10px;
+        }
+    }
+    @media #{$information-sm-laptop} {
+        .section-title {
+            font-size: 35px;
+        }
+        .desc {
+            font-size: 9px;
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-title {
+            font-size: 42px;
+        }
+        .desc {
+            font-size: 16px;
+        }
+    }
+    @media #{$information-phone} {
+        .section-title {
+            font-size: 24px;
+        }
+        .desc {
+            font-size: 10px;
+        }
+    }
+    @media #{$information-sm-phone} {
+        .section-title {
+            font-size: 21px;
+        }
+        .desc {
+            font-size: 9px;
         }
     }
 }

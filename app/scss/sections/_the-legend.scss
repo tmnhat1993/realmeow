@@ -93,4 +93,248 @@
             }
         }
     }
+    /* === RESPONSIVE === */
+    @media #{$information-sm-screen} {
+        .section-realmeow-the-legend,
+        #realmeow-the-legend {
+            background-color: $black;
+            padding: 9.45vw 0 5vw;
+            // Legen Intro Layout
+            .legend-intro-layout {
+                width: 920px;
+                .desc-column {
+                    padding-left: 10%;
+                    .desc-group {
+                        margin-bottom: 100px;
+                        .intro-title-holder {
+                            .group-sub-title {
+                                font-size: 18px;
+                                width: 180px;
+                                margin-bottom: 9px;
+                                &:after {
+                                    height: 1px;
+                                }
+                            }
+                            .realmeow-logo-holder {
+                                width: 180px;
+                            }
+                        }
+                        .group-title {
+                            font-size: 32px;
+                        }
+                        .desc {
+                            font-size: 15px;
+                            line-height: 1.75;
+                            padding-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        .section-realmeow-the-legend,
+        #realmeow-the-legend {
+            background-color: $black;
+            padding: 9.45vw 0 5vw;
+            // Title
+            .title-holder {
+                position: relative;
+                margin-bottom: 80px;
+                .section-title {
+                    position: relative;
+                    z-index: 2;
+                }
+                .decor {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    transform: translateY(-20%);
+                    img {
+                        transform: rotate(47deg);
+                        width: 8vw;
+                    }
+                }
+            }
+            // Legen Intro Layout
+            .legend-intro-layout {
+                width: 80%;
+                padding: 0 30px;
+                display: grid;
+                grid-template-columns: 1fr;
+                // Image Column
+                .image-column {
+                    flex-basis: 58.333%;
+                    position: relative;
+                    margin-bottom: 10vw;
+                    .mark-image {
+                        position: relative;
+                        width: 94.7619%;
+                        z-index: 2;
+                    }
+                    .img-frame {
+                        position: absolute;
+                        width: 94.7619%;
+                        height: 100%;
+                        top: 5%;
+                        left: 5%;
+                        border: 1px solid #979797;
+                    }
+                }
+                .desc-column {
+                    padding-left: 0;
+                    .desc-group {
+                        margin-bottom: 40px;
+                        text-align: center;
+                        .intro-title-holder {
+                            .group-sub-title {
+                                font-size: 24px;
+                                width: 260px;
+                                margin: 0 auto 10px;
+                                .content {
+                                    padding: 0 8px;
+                                    z-index: 2;
+                                }
+                                &:after {
+                                    top: 49%;
+                                    height: 2px;
+                                }
+                            }
+                            .realmeow-logo-holder {
+                                width: 260px;
+                                margin: 2vw auto;
+                            }
+                        }
+                        .group-title {
+                            font-size: 50px;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                        }
+                        .desc {
+                            font-size: 18px;
+                            line-height: 1.75;
+                            padding-top: 20px;
+                            color: #CBCBCB;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-phone} {
+        .section-realmeow-the-legend,
+        #realmeow-the-legend {
+            padding: 15vw 0 10vw;
+            // Title
+            .title-holder {
+                margin-bottom: 40px;
+                .decor {
+                    left: 50%;
+                    transform: translateY(-24%);
+                    img {
+                        transform: rotate(47deg);
+                        width: 10vw;
+                    }
+                }
+            }
+            // Legen Intro Layout
+            .legend-intro-layout {
+                width: 90%;
+                padding: 0 20px;
+                grid-template-columns: 1fr;
+                // Image Column
+                .image-column {
+                    flex-basis: 58.333%;
+                    margin-bottom: 8vw;
+                }
+                .desc-column {
+                    .desc-group {
+                        margin-bottom: 35px;
+                        .intro-title-holder {
+                            .group-sub-title {
+                                font-size: 20px;
+                                width: 200px;
+                                margin: 0 auto 10px;
+                                .content {
+                                    padding: 0 8px;
+                                    z-index: 2;
+                                }
+                                &:after {
+                                    top: 49%;
+                                    height: 1px;
+                                }
+                            }
+                            .realmeow-logo-holder {
+                                width: 200px;
+                                margin: 3vw auto 0;
+                            }
+                        }
+                        .group-title {
+                            font-size: 30px;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                        }
+                        .desc {
+                            font-size: 14px;
+                            line-height: 1.75;
+                            padding-top: 20px;
+                            color: #CBCBCB;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$information-sm-phone} {
+        .section-realmeow-the-legend,
+        #realmeow-the-legend {
+            // Legen Intro Layout
+            .legend-intro-layout {
+                width: 92%;
+                padding: 0 15px;
+                grid-template-columns: 1fr;
+                // Image Column
+                .image-column {
+                    flex-basis: 58.333%;
+                    margin-bottom: 8vw;
+                }
+                .desc-column {
+                    .desc-group {
+                        margin-bottom: 35px;
+                        .intro-title-holder {
+                            .group-sub-title {
+                                font-size: 18px;
+                                width: 180px;
+                                margin: 0 auto 10px;
+                                .content {
+                                    padding: 0 8px;
+                                    z-index: 2;
+                                }
+                                &:after {
+                                    top: 49%;
+                                    height: 1px;
+                                }
+                            }
+                            .realmeow-logo-holder {
+                                width: 180px;
+                                margin: 3vw auto 0;
+                            }
+                        }
+                        .group-title {
+                            font-size: 26px;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                        }
+                        .desc {
+                            font-size: 12px;
+                            line-height: 1.75;
+                            padding-top: 20px;
+                            color: #CBCBCB;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -11,4 +11,25 @@
             cursor: pointer;
         }
     }
+    /* === RESPONSIVE === */
+    @media #{$information-md-screen} {
+        #realmeow-tvc-banner,
+        .section-realmeow-tvc-banner {
+            width: 1680px;
+            margin-left: calc((100% - 1680px)/2);
+        }
+    }
+    /* === MOBILE === */
+    @media #{$information-tablet} {
+        #realmeow-tvc-banner,
+        .section-realmeow-tvc-banner {
+            width: 100%;
+            margin-left: 0;
+            .play-btn-holder {
+                width: 32%;
+                top: 40%;
+                left: 34%;
+            }
+        }
+    }
 }
