@@ -179,6 +179,11 @@
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+    50% {
+        -webkit-transform: rotate(-180deg) scale(0.5);
+        transform: rotate(-180deg) scale(0.5);
+        opacity: 0.7;
+    }
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);

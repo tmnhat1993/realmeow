@@ -48,6 +48,8 @@
             .power-group {
                 color: $white;
                 position: absolute;
+                cursor: pointer;
+                transition: all ease-in 100ms;
                 // Common inner elements
                 .decor,
                 .power-title,
@@ -61,15 +63,33 @@
                     word-spacing: -.5px;
                 }
                 .decor {
-                    img {
+                    img,
+                    svg {
                         display: block;
                         width: 100%;
+                        height: auto;
+                        path {
+                            stroke: #979797;
+                            transition: all ease-in 100ms;
+                        }
                     }
                 }
                 .power-desc {
                     font-size: 12px;
                     line-height: 18px;
                     white-space: nowrap;
+                }
+                &:hover {
+                    color: $yellow;
+                    transition: all ease-out 150ms;
+                    .decor {
+                        svg {
+                            path {
+                                stroke: $yellow;
+                                transition: all ease-out 150ms;
+                            }
+                        }
+                    }
                 }
                 // Individual Elements Styling
                 &#realmeow-sensor-power {

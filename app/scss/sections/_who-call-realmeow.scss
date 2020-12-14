@@ -19,8 +19,23 @@
             top: 20.6%;
             .realmeow-logo-holder {
                 margin: 5vw 0 2.1484375vw;
-                img {
+                cursor: pointer;
+                img,
+                svg {
                     width: 15.625%;
+                    height: auto;
+                    path {
+                        fill: $white;
+                        transition: all ease-in 100ms;
+                    }
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: $yellow;
+                            transition: all ease-out 150ms;
+                        }
+                    }
                 }
             }
         }

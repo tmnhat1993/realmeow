@@ -14,6 +14,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- TRACKING CODE -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js"
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-M23XR8L");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !(function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+        fbq("init", "347803056300620");
+        fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none;"
+      src="https://www.facebook.com/tr?id=347803056300620&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2047074585405030');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2047074585405030&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- TRACKING CODE - END -->
 </head>
 
 <body>
@@ -27,7 +98,7 @@
                 <div class="image-holder shadow-1">
                     <picture>
                         <source srcset="img/banner/shadow-1.png" media="(max-width: 1920px)">
-                        <img src="img/banner/shadow-1@2x.png" alt="">
+                        <img draggable="false" src="img/banner/shadow-1@2x.png" alt="">
                     </picture>
                 </div>
 
@@ -35,7 +106,7 @@
                 <div class="image-holder shadow-2">
                     <picture>
                         <source srcset="img/banner/shadow-2.png" media="(max-width: 1920px)">
-                        <img src="img/banner/shadow-2@2x.png" alt="">
+                        <img draggable="false" src="img/banner/shadow-2@2x.png" alt="">
                     </picture>
                 </div>
 
@@ -43,7 +114,7 @@
                 <div class="image-holder main-img">
                     <picture>
                         <source srcset="img/banner/main-cat.png" media="(max-width: 1920px)">
-                        <img src="img/banner/main-cat@2x.png" alt="">
+                        <img draggable="false" src="img/banner/main-cat@2x.png" alt="">
                     </picture>
                 </div>
             </div>
@@ -52,14 +123,14 @@
             <div class="background-holder">
                 <!-- Logo Holder -->
                 <div class="bg-logo">
-                    <img src="img/realmeow-logo.svg" alt="">
+                    <img draggable="false" src="img/realmeow-logo.svg" alt="">
                 </div>
 
                 <!-- Background Left -->
                 <div class="bg-left">
                     <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 768px)">
                     <source srcset="img/banner/background-left.png" media="(max-width: 1280px)">
-                    <img src="img/banner/background-left@2x.png" alt="">
+                    <img draggable="false" src="img/banner/background-left@2x.png" alt="">
                 </div>
 
                 <!-- Background Right -->
@@ -67,13 +138,13 @@
                     <picture>
                         <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 768px)">
                         <source srcset="img/banner/backgroud-right.png" media="(max-width: 1280px)">
-                        <img src="img/banner/backgroud-right@2x.png" alt="">
+                        <img draggable="false" src="img/banner/backgroud-right@2x.png" alt="">
                     </picture>
                 </div>
 
                 <!-- Side Right Background Decoration -->
                 <div class="side-decor-right">
-                    <img src="img/banner/bg-txt-right.svg" alt="">
+                    <img draggable="false" src="img/banner/bg-txt-right.svg" alt="">
                 </div>
 
                 <!-- Background On Mobile -->
@@ -81,7 +152,7 @@
                     <picture>
                         <source srcset="img/banner/bg-mb.jpg" media="(max-width: 480px)">
                         <source srcset="img/banner/bg-tablet.jpg" media="(max-width: 768px)">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="">
+                        <img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="">
                     </picture>
                 </div>
             </div>
@@ -90,12 +161,12 @@
             <div class="decoration-holder">
                 <!-- Star 1 -->
                 <div class="decor-star star-1">
-                    <img src="img/star.svg" alt="">
+                    <img draggable="false" src="img/star.svg" alt="">
                 </div>
 
                 <!-- Star 2 -->
                 <div class="decor-star star-2">
-                    <img src="img/star.svg" alt="">
+                    <img draggable="false" src="img/star.svg" alt="">
                 </div>
             </div>
         </section>
@@ -110,7 +181,7 @@
                     <source srcset="img/intro/bg-mb.jpg" media="(max-width:480px)">
                     <source srcset="img/intro/bg-tablet.jpg" media="(max-width:768px)">
                     <source srcset="img/intro/bg.jpg" media="(max-width:1280px)">
-                    <img src="img/intro/bg@2x.jpg" alt="">
+                    <img draggable="false" src="img/intro/bg@2x.jpg" alt="">
                 </picture>
             </div>
 
@@ -136,7 +207,7 @@
                     <source srcset="img/cover-listing/bg-mb.jpg" media="(max-width:480px)">
                     <source srcset="img/cover-listing/bg-tablet.jpg" media="(max-width:768px)">
                     <source srcset="img/cover-listing/bg.jpg" media="(max-width:1280px)">
-                    <img src="img/cover-listing/bg@2x.jpg" alt="">
+                    <img draggable="false" src="img/cover-listing/bg@2x.jpg" alt="">
                 </picture>
             </div>
 
@@ -148,21 +219,21 @@
                     <li class="cover-item img-holder">
                         <picture>
                             <!-- <source srcset="img/cover-listing/andrew.jpg" media="(max-width:480px)"> -->
-                            <img src="img/cover-listing/andrew@2x.jpg" alt="">
+                            <img draggable="false" src="img/cover-listing/andrew@2x.jpg" alt="">
                         </picture>
                     </li>
                     <!-- Cover Item -->
                     <li class="cover-item img-holder">
                         <picture>
                             <!-- <source srcset="img/cover-listing/realmeow.jpg" media="(max-width:480px)"> -->
-                            <img src="img/cover-listing/realmeow@2x.jpg" alt="">
+                            <img draggable="false" src="img/cover-listing/realmeow@2x.jpg" alt="">
                         </picture>
                     </li>
                     <!-- Cover Item -->
                     <li class="cover-item img-holder">
                         <picture>
                             <!-- <source srcset="img/cover-listing/dr-devourer.jpg" media="(max-width:480px)"> -->
-                            <img src="img/cover-listing/dr-devourer@2x.jpg" alt="">
+                            <img draggable="false" src="img/cover-listing/dr-devourer@2x.jpg" alt="">
                         </picture>
                     </li>
                 </ul>
@@ -178,13 +249,13 @@
                 <picture>
                     <source srcset="img/tvc/bg-mb.jpg" media="(max-width:480px)">
                     <source srcset="img/tvc/bg-tablet.jpg" media="(max-width:768px)">
-                    <img src="img/tvc/bg@2x.jpg" alt="">
+                    <img draggable="false" src="img/tvc/bg@2x.jpg" alt="">
                 </picture>
             </div>
 
             <!-- Play Button -->
             <div class="play-btn-holder img-holder play-modal-video" data-video-id="8NwFFVPjTZI">
-                <img src="img/tvc/play-btn.svg" alt="">
+                <img draggable="false" src="img/tvc/play-btn.svg" alt="">
             </div>
         </section>
         <!-- TVC Banner - END -->
@@ -197,7 +268,7 @@
                 <picture>
                     <source srcset="img/who-call-realmeow/bg-mb.jpg" media="(max-width:480px)">
                     <source srcset="img/who-call-realmeow/bg-tablet.jpg" media="(max-width:768px)">
-                    <img src="img/who-call-realmeow/bg@2x.jpg" alt="">
+                    <img draggable="false" src="img/who-call-realmeow/bg@2x.jpg" alt="">
                 </picture>
             </div>
 
@@ -207,7 +278,20 @@
                     Ai đã gọi anh ấy đến đây?
                 </h2>
                 <div class="realmeow-logo-holder txt-center">
-                    <img src="img/realmeow-logo.svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1195.612" height="217.735" viewBox="0 0 1195.612 217.735">
+                        <g id="mao_logo" transform="translate(0.003 -0.007)">
+                        <path id="Fill_1" data-name="Fill 1" d="M104.829,217.735a118.384,118.384,0,0,1-30.857-3.663,73.7,73.7,0,0,1-12.433-4.565,57.988,57.988,0,0,1-10.421-6.374,55.947,55.947,0,0,1-8.6-8.3A68.649,68.649,0,0,1,35.3,184.317,106.4,106.4,0,0,1,25.022,156.8c-4.249-18.027-8.477-36.958-12.925-57.874C7.891,79.171,4.405,61.938,1.441,46.236a81.77,81.77,0,0,1-1.4-11.8,47.756,47.756,0,0,1,.57-9.894,29.45,29.45,0,0,1,2.528-8.018,22.226,22.226,0,0,1,4.474-6.172,26.543,26.543,0,0,1,6.5-4.545,43.739,43.739,0,0,1,8.795-3.233C29.49.866,37.73,0,47.4,0A117.188,117.188,0,0,1,73.293,2.573a58.863,58.863,0,0,1,19.189,7.778,53.067,53.067,0,0,1,14.291,14.19,89.825,89.825,0,0,1,10.735,21.694c5.73,15.884,11.7,33.673,17.754,52.872,6.235,19.777,11.941,39.186,16.959,57.687,2.959,10.573,4.333,19.833,4.081,27.522a41.455,41.455,0,0,1-1.6,10.516,26.987,26.987,0,0,1-4.057,8.3,26.338,26.338,0,0,1-6.9,6.374,41.323,41.323,0,0,1-9.941,4.565C126.187,216.5,116.439,217.735,104.829,217.735ZM54.718,27.744c-6.137,0-10.294,1.3-12.357,3.853-1.543,1.912-1.957,4.58-1.233,7.931,1.6,7.976,3.525,16.9,5.884,27.3,2.293,10.149,4.862,20.968,7.634,32.154s5.735,22.634,8.79,33.99c3.139,11.644,6.145,22.4,8.934,31.981,2.806,10.035,10.384,15.123,22.526,15.123,6.4,0,10.785-1.464,13.047-4.351,1.957-2.5,2.369-6.122,1.223-10.772-2.174-9.578-4.815-20.337-7.851-31.981-2.756-10.55-5.764-21.668-9.2-33.99-3.191-11.4-6.3-22.215-9.253-32.154-3.1-10.376-5.9-19.3-8.573-27.3C71.8,31.6,65.393,27.744,54.718,27.744Z" transform="translate(845.753 0.007)"/>
+                        <path id="Fill_3" data-name="Fill 3" d="M67.446,0h-55.6c8.111,1.807,14.7,8.6,12.839,22.9L0,212.357H109.634l1.908-40.467H51.224Z" transform="translate(429.256 2.221)"/>
+                        <path id="Fill_5" data-name="Fill 5" d="M147.73,212.343H100.309l2.616-51.687H65.06L47.422,212.342H0L74.227,22.222c2.627-7.052,2.875-12.657.738-16.659A11.36,11.36,0,0,0,67.215,0h80.8l-.289,212.342ZM109.547,30.2,77.812,123.239h27.022Z" transform="translate(268.757 2.227)"/>
+                        <path id="Fill_7" data-name="Fill 7" d="M132.564.217,97.6,108,55.634.188V0H0C8.27,1.807,15.5,8.6,14.949,22.9L7.72,212.357H55.157l.289-126.145,45.528,126.145L138.333,86.241l8.458,126.116h47.436L172.352,0h-39.8Z" transform="translate(543.174 2.215)"/>
+                        <path id="Fill_9" data-name="Fill 9" d="M132.42,212.358H82.164l8.978-80.212h-.029l3.629-32.689L81.036,132.144l-5.827,13.88L47.393,212.357H0l85.359-187.5c3.195-7.013,3.648-12.779,1.349-17.139C84.613,3.743,80.242,1.076,74.067,0H147.86c9.855,0,18.14.855,24.625,2.541A39.912,39.912,0,0,1,181,5.721a22.156,22.156,0,0,1,5.983,4.457,18.467,18.467,0,0,1,3.7,6.055,25.947,25.947,0,0,1,1.534,7.839c.3,5.808-.883,12.92-3.5,21.137-1.42,4.488-2.743,8.506-3.933,11.942-1.215,3.513-2.469,7.025-3.73,10.438-1.184,3.209-2.66,7.04-4.786,12.42a111.67,111.67,0,0,1-7.384,15.4,80.854,80.854,0,0,1-8.924,12.517,64.193,64.193,0,0,1-11.02,9.929A68.834,68.834,0,0,1,135.6,125.2l-3.181,87.152ZM123.773,30.217,96.044,96.361h12.4c11.859,0,20.056-4.806,24.361-14.284a344.49,344.49,0,0,0,15.268-38.791c1.285-3.907,1.151-6.974-.4-9.116A8.61,8.61,0,0,0,143.2,31.2a25.429,25.429,0,0,0-7.689-.986Z" transform="translate(-0.003 2.218)"/>
+                        <path id="Fill_11" data-name="Fill 11" d="M147.8,0l33.687,109.359L116.892,0H86.906l22.525,109.359L56,0H0C9.253,1.807,20.1,8.6,27.2,22.9a.7.7,0,0,0-.043-.1l91.113,189.412h48.853L138.1,90.9,205.72,212.212h48.853L187.6,0Z" transform="translate(941.036 2.221)"/>
+                        <path id="Fill_13" data-name="Fill 13" d="M0,0C8.559,1.807,16.858,8.6,18.564,22.9L41.176,212.357H150.492l-8.183-40.467H82.28l-9.2-59.248h54.333l-6.925-34.67H67.706L60.289,30.217h53.393L107.566,0H0Z" transform="translate(717.834 2.221)"/>
+                        <path id="Fill_15" data-name="Fill 15" d="M56.848,0c7.735,1.807,12.882,8.6,8,22.9L0,212.357H109.345l10.5-40.467H59.827l18.145-59.248h54.318l9.08-34.67H88.583l14.646-47.754h53.378L164.443,0H56.848Z" transform="translate(149.271 2.221)"/>
+                        </g>
+                    </svg>
+
+                    <!-- <img draggable="false" src="img/realmeow-logo.svg" alt=""> -->
                 </div>
                 <p class="desc white-txt txt-center">
                     realmeow, đại sứ truyền thông văn hóa, đến từ hành tinh M58-2018828-S, cách <br class="mb-hide">Trái đất 63,2 triệu năm ánh sáng, những người tạo ra hành tinh này là người có óc<br class="mb-hide"> sáng tạo cao và đầy sự sắc bén.
@@ -215,7 +299,7 @@
             </div>
 
             <!-- Realmeow Profile -->
-            <div class="realmeow-profile">
+            <div class="realmeow-profile" id="realmeow-profile" data-scroll>
                 <h2 class="section-title white-txt txt-center">
                     Sơ yếu lý lịch
                 </h2>
@@ -223,7 +307,7 @@
                     <picture>
                         <source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width:768px)">
                         <source srcset="img/who-call-realmeow/card.jpg" media="(max-width:1280px)">
-                        <img src="img/who-call-realmeow/card@2x.jpg" alt="">
+                        <img draggable="false" src="img/who-call-realmeow/card@2x.jpg" alt="">
                     </picture>
                 </div>
             </div>
@@ -236,7 +320,7 @@
             <!-- Background -->
             <div class="background-holder">
                 <div class="realmeow-logo img-holder">
-                    <img src="img/realmeow-logo.svg" alt="">
+                    <img draggable="false" src="img/realmeow-logo.svg" alt="">
                 </div>
             </div>
 
@@ -246,49 +330,49 @@
                 <div class="img-holder image-1 active">
                     <picture>
                         <source srcset="img/slogan/angle-1.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-1@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-1@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-2">
                     <picture>
                         <source srcset="img/slogan/angle-2.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-2@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-2@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-3">
                     <picture>
                         <source srcset="img/slogan/angle-3.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-3@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-3@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-4">
                     <picture>
                         <source srcset="img/slogan/angle-4.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-4@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-4@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-5">
                     <picture>
                         <source srcset="img/slogan/angle-5.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-5@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-5@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-6">
                     <picture>
                         <source srcset="img/slogan/angle-6.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-6@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-6@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-7">
                     <picture>
                         <source srcset="img/slogan/angle-7.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-7@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-7@2x.png" alt="">
                     </picture>
                 </div>
                 <div class="img-holder image-8">
                     <picture>
                         <source srcset="img/slogan/angle-8.png" media="(max-width:1280px)">
-                        <img src="img/slogan/angle-8@2x.png" alt="">
+                        <img draggable="false" src="img/slogan/angle-8@2x.png" alt="">
                     </picture>
                 </div>
             </div>
@@ -331,7 +415,7 @@
                     <source srcset="img/power/bg-mb.jpg" media="(max-width: 480px)">
                     <source srcset="img/power/bg-tablet.jpg" media="(max-width: 768px)">
                     <source srcset="img/power/bg.jpg" media="(max-width: 1920px)">
-                    <img src="img/power/bg-2k.jpg" alt="">
+                    <img draggable="false" src="img/power/bg-2k.jpg" alt="">
                 </picture>
             </div>
 
@@ -344,19 +428,24 @@
             <div class="wire-element-holder img-holder">
                 <picture>
                     <source srcset="img/power/wire-mb.svg" media="(max-width: 768px)">
-                    <img src="img/power/wire.svg" alt="">
+                    <img draggable="false" src="img/power/wire.svg" alt="">
                 </picture>
             </div>
 
             <!-- Power Holder -->
             <div class="power-listing-holder">
                 <!-- <div class="mold img-holder">
-                    <img src="img/power/screen.jpg" alt="">
+                    <img draggable="false" src="img/power/screen.jpg" alt="">
                 </div> -->
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-sensor-power">
                     <div class="decor">
-                        <img src="img/power/frame-8.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="238.6" height="184.6" viewBox="0 0 238.6 184.6">
+                            <g id="编组_12" data-name="编组 12" transform="translate(0.3 0.3)">
+                            <path id="矩形" d="M13.065,0H238V159.136L215.741,184H0V13.1Z" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            <path id="路径_10" data-name="路径 10" d="M0,.5,209.5,1" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                        </svg>
                     </div>
                     <h3 class="power-title">Nhận biết <br class="mb-show">siêu tần số</h3>
                     <p class="power-desc">
@@ -367,7 +456,12 @@
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-radioactive-power">
                     <div class="decor">
-                        <img src="img/power/frame-5.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="195.6" height="205.35" viewBox="0 0 195.6 205.35">
+                            <g id="编组_12" data-name="编组 12" transform="translate(195.3 -0.2)">
+                              <path id="矩形" d="M-10.7,0H-195V179.886l18.237,24.864H0V13.1Z" transform="translate(0 0.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                              <path id="路径_10" data-name="路径 10" d="M0,.5H-175.591" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                          </svg>
                     </div>
                     <h3 class="power-title">Bức xạ năng lượng</h3>
                     <p class="power-desc">
@@ -378,7 +472,12 @@
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-machine-power">
                     <div class="decor">
-                        <img src="img/power/frame-4.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="238.6" height="160.502" viewBox="0 0 238.6 160.502">
+                            <g id="编组_12" data-name="编组 12" transform="translate(0.3 0.3)">
+                              <path id="矩形" d="M13.065,0H238V135.037L215.741,159.9H0V13.1Z" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                              <path id="路径_10" data-name="路径 10" d="M0,.5,209.5,1" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                          </svg>
                     </div>
                     <h3 class="power-title">Máy biến áp <br class="mb-show">tối thượng</h3>
                     <p class="power-desc">
@@ -389,7 +488,12 @@
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-star-contact-power">
                     <div class="decor">
-                        <img src="img/power/frame-1.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="195.6" height="245.85" viewBox="0 0 195.6 245.85">
+                            <g id="编组_12" data-name="编组 12" transform="translate(195.3 -0.2)">
+                              <path id="矩形" d="M-10.7,0H-195V220.386l18.237,24.864H0V13.1Z" transform="translate(0 0.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                              <path id="路径_10" data-name="路径 10" d="M0,.5H-175.591" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                          </svg>
                     </div>
                     <h3 class="power-title">Truyền thông tin<br class="mb-hide"> qua các vì sao</h3>
                     <p class="power-desc">
@@ -401,7 +505,12 @@
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-collection-power">
                     <div class="decor">
-                        <img src="img/power/frame-2.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="195.6" height="175.872" viewBox="0 0 195.6 175.872">
+                            <g id="编组_12" data-name="编组 12" transform="translate(0.3 -0.2)">
+                              <path id="矩形" d="M10.7,0H195V150.408l-18.237,24.864H0V13.1Z" transform="translate(0 0.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                              <path id="路径_10" data-name="路径 10" d="M0,.5H175.591" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                          </svg>
                     </div>
                     <h3 class="power-title">Bộ sưu tập đa chiều</h3>
                     <p class="power-desc">
@@ -412,7 +521,12 @@
                 <!-- Power Group -->
                 <div class="power-group" id="realmeow-gravity-power">
                     <div class="decor">
-                        <img src="img/power/frame-9.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="195.6" height="176.991" viewBox="0 0 195.6 176.991">
+                            <g id="编组_12" data-name="编组 12" transform="translate(195.3 -0.2)">
+                              <path id="矩形" d="M-10.7,0H-195V151.527l18.237,24.864H0V13.1Z" transform="translate(0 0.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                              <path id="路径_10" data-name="路径 10" d="M0,.5H-175.591" transform="translate(0 12.5)" fill="none"  stroke-miterlimit="10" stroke-width="0.6"/>
+                            </g>
+                          </svg>
                     </div>
                     <h3 class="power-title">Thiết bị trọng lực</h3>
                     <p class="power-desc">
@@ -432,7 +546,7 @@
                 <div class="title-holder">
                     <h2 class="section-title white-txt txt-center">Huyền thoại</h2>
                     <div class="decor img-holder">
-                        <img src="img/legend/highlight.svg" alt="">
+                        <img draggable="false" src="img/legend/highlight.svg" alt="">
                     </div>
                 </div>
 
@@ -446,7 +560,7 @@
                                     <span class="content">Người tạo ra</span>
                                 </h4>
                                 <div class="realmeow-logo-holder img-holder">
-                                    <img src="img/realmeow-logo.svg" alt="">
+                                    <img draggable="false" src="img/realmeow-logo.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -455,7 +569,7 @@
                     <!-- Image Column -->
                     <div class="image-column">
                         <div class="img-holder mark-image">
-                            <img src="img/legend/mark.png" alt="">
+                            <img draggable="false" src="img/legend/mark.png" alt="">
                         </div>
                         <div class="img-holder img-frame"></div>
                     </div>
@@ -470,7 +584,7 @@
                                     <span class="content">Người tạo ra</span>
                                 </h4>
                                 <div class="realmeow-logo-holder img-holder">
-                                    <img src="img/realmeow-logo.svg" alt="">
+                                    <img draggable="false" src="img/realmeow-logo.svg" alt="">
                                 </div>
                             </div>
 
@@ -507,11 +621,11 @@
         <section class="section section-realmeow-equipment" id="realmeow-equipment" data-scroll>
             <!-- Background -->
             <div class="background-holder img-holder">
-                <img src="img/equipment/top-bg.jpg" alt="">
+                <img draggable="false" src="img/equipment/top-bg.jpg" alt="">
                 <h2 class="section-title white-txt txt-center">
                     <span class="context">Trang thiết bị</span>
                     <div class="decor">
-                        <img src="img/equipment/highlight.svg" alt="">
+                        <img draggable="false" src="img/equipment/highlight.svg" alt="">
                     </div>
                 </h2>
             </div>
@@ -525,14 +639,14 @@
                     <li class="equipment-item layout-light">
                         <div class="equipment-name">
                             <div class="logo-holder img-holder">
-                                <img src="img/realmeow-logo-black.svg" alt="">
+                                <img draggable="false" src="img/realmeow-logo-black.svg" alt="">
                             </div>
                             <div class="equipment-context">Hộp quà</div>
                         </div>
                         <div class="equipment-image img-holder bg-mode">
                             <picture>
                                 <source srcset="img/equipment/gift-1-mb.png" media="(max-width: 768px)">
-                                <img src="img/equipment/gift-1.png" alt="">
+                                <img draggable="false" src="img/equipment/gift-1.png" alt="">
                             </picture>
                         </div>
                     </li>
@@ -541,14 +655,14 @@
                     <li class="equipment-item layout-dark">
                         <div class="equipment-name">
                             <div class="logo-holder img-holder">
-                                <img src="img/realmeow-logo.svg" alt="">
+                                <img draggable="false" src="img/realmeow-logo.svg" alt="">
                             </div>
                             <div class="equipment-context">Áo hoodie</div>
                         </div>
                         <div class="equipment-image img-holder bg-mode">
                             <picture>
                                 <source srcset="img/equipment/gift-2-mb.png" media="(max-width: 768px)">
-                                <img src="img/equipment/gift-2.png" alt="">
+                                <img draggable="false" src="img/equipment/gift-2.png" alt="">
                             </picture>
                         </div>
                     </li>
@@ -557,14 +671,14 @@
                     <li class="equipment-item layout-light">
                         <div class="equipment-name">
                             <div class="logo-holder img-holder">
-                                <img src="img/realmeow-logo-black.svg" alt="">
+                                <img draggable="false" src="img/realmeow-logo-black.svg" alt="">
                             </div>
                             <div class="equipment-context">Áo thun</div>
                         </div>
                         <div class="equipment-image img-holder bg-mode">
                             <picture>
                                 <source srcset="img/equipment/gift-3-mb.png" media="(max-width: 768px)">
-                                <img src="img/equipment/gift-3.png" alt="">
+                                <img draggable="false" src="img/equipment/gift-3.png" alt="">
                             </picture>
                         </div>
                     </li>
@@ -573,14 +687,14 @@
                     <li class="equipment-item layout-dark">
                         <div class="equipment-name">
                             <div class="logo-holder img-holder">
-                                <img src="img/realmeow-logo.svg" alt="">
+                                <img draggable="false" src="img/realmeow-logo.svg" alt="">
                             </div>
                             <div class="equipment-context">Nón</div>
                         </div>
                         <div class="equipment-image img-holder bg-mode">
                             <picture>
                                 <source srcset="img/equipment/gift-4-mb.png" media="(max-width: 768px)">
-                                <img src="img/equipment/gift-4.png" alt="">
+                                <img draggable="false" src="img/equipment/gift-4.png" alt="">
                             </picture>
                         </div>
                     </li>
@@ -589,6 +703,15 @@
             <!-- Equipment Holder - END -->
         </section>
         <!-- The Equipment -END -->
+
+        <!-- SOCIALS COMMENT -->
+        <section id="realme-c15-comments" class="section-social-comment" style="padding: 30px 0; width: 1200px; max-width: 100%; margin: auto">
+            <div class="container">
+                <div class="fb-comments" data-href="https://realmemobile.vn/realmeow" data-width="100%" data-numposts="5">
+                </div>
+            </div>
+        </section>
+        <!-- SOCIALS COMMENT - END -->
     </div>
     <!-- MAIN CONTENT -->
 

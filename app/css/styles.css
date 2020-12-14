@@ -108,12 +108,14 @@ body {
   overflow: hidden; }
 
 #realmeow-page .img-holder img,
-#realmeow-page .img-holder picture {
+#realmeow-page .img-holder picture,
+#realmeow-page .img-holder svg {
   display: block;
   width: 100%; }
 
 #realmeow-page .img-holder.bg-mode img,
-#realmeow-page .img-holder.bg-mode picture {
+#realmeow-page .img-holder.bg-mode picture,
+#realmeow-page .img-holder.bg-mode svg {
   object-fit: cover;
   object-position: center; }
 
@@ -335,6 +337,10 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(-180deg) scale(0.5);
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0.7; }
   100% {
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
@@ -474,23 +480,34 @@ body {
       height: 62%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      justify-content: space-around;
+      z-index: 3; }
       #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item,
       #realmeow-page .section-realmeow-slogan-banner .slogan-listing .slogan-item {
         font-size: 100px;
         white-space: nowrap;
         font-weight: 600;
         font-style: italic;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item .main-txt,
         #realmeow-page .section-realmeow-slogan-banner .slogan-listing .slogan-item .main-txt {
           position: relative;
-          z-index: 2; }
+          z-index: 2;
+          transition: all ease-in 100ms; }
         #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item .shadow-txt,
         #realmeow-page .section-realmeow-slogan-banner .slogan-listing .slogan-item .shadow-txt {
           position: absolute;
-          top: 15px;
+          top: 10px;
           -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.25);
+          -webkit-text-fill-color: #000; }
+        #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item:hover .main-txt,
+        #realmeow-page .section-realmeow-slogan-banner .slogan-listing .slogan-item:hover .main-txt {
+          color: #ffca12;
+          transition: all ease-out 150ms; }
+        #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item:hover .shadow-txt,
+        #realmeow-page .section-realmeow-slogan-banner .slogan-listing .slogan-item:hover .shadow-txt {
+          -webkit-text-stroke: 0.5px rgba(255, 202, 18, 0.25);
           -webkit-text-fill-color: #000; }
   @media only screen and (max-width: 1920px) {
     #realmeow-page #realmeow-slogan-banner .slogan-listing .slogan-item,
@@ -853,7 +870,9 @@ body {
       #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group,
       #realmeow-page #realmeow-superpower .power-listing-holder .power-group {
         color: #fff;
-        position: absolute; }
+        position: absolute;
+        cursor: pointer;
+        transition: all ease-in 100ms; }
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .decor,
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .power-title,
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .power-desc,
@@ -866,14 +885,31 @@ body {
           font-size: 17px;
           word-spacing: -.5px; }
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .decor img,
-        #realmeow-page #realmeow-superpower .power-listing-holder .power-group .decor img {
+        #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .decor svg,
+        #realmeow-page #realmeow-superpower .power-listing-holder .power-group .decor img,
+        #realmeow-page #realmeow-superpower .power-listing-holder .power-group .decor svg {
           display: block;
-          width: 100%; }
+          width: 100%;
+          height: auto; }
+          #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .decor img path,
+          #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .decor svg path,
+          #realmeow-page #realmeow-superpower .power-listing-holder .power-group .decor img path,
+          #realmeow-page #realmeow-superpower .power-listing-holder .power-group .decor svg path {
+            stroke: #979797;
+            transition: all ease-in 100ms; }
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group .power-desc,
         #realmeow-page #realmeow-superpower .power-listing-holder .power-group .power-desc {
           font-size: 12px;
           line-height: 18px;
           white-space: nowrap; }
+        #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group:hover,
+        #realmeow-page #realmeow-superpower .power-listing-holder .power-group:hover {
+          color: #ffca12;
+          transition: all ease-out 150ms; }
+          #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group:hover .decor svg path,
+          #realmeow-page #realmeow-superpower .power-listing-holder .power-group:hover .decor svg path {
+            stroke: #ffca12;
+            transition: all ease-out 150ms; }
         #realmeow-page .section-realmeow-superpower .power-listing-holder .power-group#realmeow-sensor-power,
         #realmeow-page #realmeow-superpower .power-listing-holder .power-group#realmeow-sensor-power {
           width: 12%;
@@ -1563,6 +1599,12 @@ body {
   #realmeow-page .section-realmeow-tvc-banner {
     background-color: #000;
     position: relative; }
+    #realmeow-page #realmeow-tvc-banner .background-holder picture,
+    #realmeow-page #realmeow-tvc-banner .background-holder image,
+    #realmeow-page .section-realmeow-tvc-banner .background-holder picture,
+    #realmeow-page .section-realmeow-tvc-banner .background-holder image {
+      -webkit-animation: zoomBg 25s cubic-bezier(0.59, 0.01, 0.47, 1) infinite;
+      animation: zoomBg 25s cubic-bezier(0.59, 0.01, 0.47, 1) infinite; }
     #realmeow-page #realmeow-tvc-banner .play-btn-holder,
     #realmeow-page .section-realmeow-tvc-banner .play-btn-holder {
       position: absolute;
@@ -1586,6 +1628,24 @@ body {
         top: 40%;
         left: 34%; } }
 
+@keyframes zoomBg {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); } }
+
+@-webkit-keyframes zoomBg {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); } }
+
 #realmeow-page {
   /* === RESPONSIVE === */
   /* === MOBILE === */ }
@@ -1608,10 +1668,24 @@ body {
       top: 20.6%; }
       #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder,
       #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder {
-        margin: 5vw 0 2.1484375vw; }
+        margin: 5vw 0 2.1484375vw;
+        cursor: pointer; }
         #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder img,
-        #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder img {
-          width: 15.625%; }
+        #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder svg,
+        #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder img,
+        #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder svg {
+          width: 15.625%;
+          height: auto; }
+          #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder img path,
+          #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder svg path,
+          #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder img path,
+          #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder svg path {
+            fill: #fff;
+            transition: all ease-in 100ms; }
+        #realmeow-page #who-call-realmeow .main-content .realmeow-logo-holder:hover svg path,
+        #realmeow-page .section-who-call-realmeow .main-content .realmeow-logo-holder:hover svg path {
+          fill: #ffca12;
+          transition: all ease-out 150ms; }
     #realmeow-page #who-call-realmeow .realmeow-profile,
     #realmeow-page .section-who-call-realmeow .realmeow-profile {
       position: absolute;

@@ -3,6 +3,13 @@
     .section-realmeow-tvc-banner {
         background-color: $black;
         position: relative;
+        .background-holder {
+            picture,
+            image {
+                -webkit-animation: zoomBg 25s cubic-bezier(.59, .01, .47, 1) infinite;
+                animation: zoomBg 25s cubic-bezier(.59, .01, .47, 1) infinite;
+            }
+        }
         .play-btn-holder {
             position: absolute;
             width: 6%;
@@ -31,5 +38,29 @@
                 left: 34%;
             }
         }
+    }
+}
+
+@keyframes zoomBg {
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@-webkit-keyframes zoomBg {
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
 }

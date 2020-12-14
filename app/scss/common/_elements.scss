@@ -4,13 +4,15 @@
     }
     .img-holder {
         img,
-        picture {
+        picture,
+        svg {
             display: block;
             width: 100%;
         }
         &.bg-mode {
             img,
-            picture {
+            picture,
+            svg {
                 object-fit: cover;
                 object-position: center;
             }

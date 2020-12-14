@@ -7669,7 +7669,7 @@ const ExpoScaleEase = __WEBPACK_IMPORTED_MODULE_0__TweenLite__["k" /* _gsScope *
 
 var _home = _interopRequireDefault(__webpack_require__(11));
 
-var _lazyLoad = _interopRequireDefault(__webpack_require__(34));
+var _lazyLoad = _interopRequireDefault(__webpack_require__(41));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7705,6 +7705,20 @@ var _Banner = _interopRequireDefault(__webpack_require__(32));
 
 var _Intro = _interopRequireDefault(__webpack_require__(33));
 
+var _CoverListing = _interopRequireDefault(__webpack_require__(34));
+
+var _TVC = _interopRequireDefault(__webpack_require__(35));
+
+var _WhoCallRealmeow = _interopRequireDefault(__webpack_require__(36));
+
+var _Slogan = _interopRequireDefault(__webpack_require__(37));
+
+var _Power = _interopRequireDefault(__webpack_require__(38));
+
+var _TheLegend = _interopRequireDefault(__webpack_require__(39));
+
+var _Equipments = _interopRequireDefault(__webpack_require__(40));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7736,7 +7750,14 @@ function () {
     var common = new _Common.default(); // Page Sections Behavior
 
     var banner = new _Banner.default();
-    var intro = new _Intro.default(); // Bind Event
+    var intro = new _Intro.default();
+    var coverListing = new _CoverListing.default();
+    var tvc = new _TVC.default();
+    var whoCall = new _WhoCallRealmeow.default();
+    var slogan = new _Slogan.default();
+    var power = new _Power.default();
+    var legend = new _TheLegend.default();
+    var equipment = new _Equipments.default(); // Bind Event
 
     this.bindEvents();
   }
@@ -7767,7 +7788,7 @@ function () {
           var elementID = $(el).attr("id");
           realmeowListener.emit("".concat(elementID, "-hide"));
         },
-        threshold: 0.225
+        threshold: 0.375
       });
     }
   }]);
@@ -10454,7 +10475,10 @@ function () {
       this.BannerTimeline.to([this.$Banner_Effect_MainImg, this.$BannerBg_Right, this.$BannerBg_Left], 0.6, {
         alpha: 1,
         ease: Power2.easeIn
-      }, "shadow-2-show");
+      }, "shadow-2-show+=0.25");
+      this.BannerTimeline.to(this.$BannerBg_SideRight, 0.4, {
+        alpha: 0.05
+      }, 'shadow-2-show+=0.6');
       this.BannerTimeline.fromTo(this.$BannerBg_Logo, 0.7, {
         y: -window.innerWidth * 0.06,
         scale: 0.7,
@@ -10464,7 +10488,7 @@ function () {
         scale: 1,
         alpha: 1,
         ease: Power2.easeIn
-      }, "shadow-2-show-=0.1");
+      }, "shadow-2-show+=0.25");
       this.BannerTimeline.add("cat-show"); // Decoration
 
       this.BannerTimeline.fromTo(this.$Banner_Decor_Star1, 0.4, {
@@ -10504,8 +10528,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _gsap = __webpack_require__(1);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10558,12 +10580,11 @@ function () {
     key: "IntroInit",
     value: function IntroInit() {
       // Init State
-      _gsap.TweenMax.set([this.$Intro_Background, this.$Intro_Title, this.$Intro_Content], {
+      TweenMax.set([this.$Intro_Background, this.$Intro_Title, this.$Intro_Content], {
         alpha: 0
       }); // Timeline Animation Build
 
-
-      this.IntroTimeline = new _gsap.TimelineMax({
+      this.IntroTimeline = new TimelineMax({
         paused: true
       }); //   Start
 
@@ -10574,7 +10595,7 @@ function () {
       }, {
         alpha: 1,
         y: 0,
-        ease: _gsap.Power3.easeOut
+        ease: Power3.easeOut
       }, "anim-start");
       this.IntroTimeline.fromTo(this.$Intro_Background, 1, {
         alpha: 0,
@@ -10582,7 +10603,7 @@ function () {
       }, {
         alpha: 1,
         scale: 1,
-        ease: _gsap.Power3.easeOut
+        ease: Power3.easeOut
       }, "anim-start+=0.4");
       this.IntroTimeline.add("background-show"); // Title
 
@@ -10603,6 +10624,766 @@ exports.default = Intro;
 
 /***/ }),
 /* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _gsap = __webpack_require__(1);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var CoverListing =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function CoverListing() {
+    _classCallCheck(this, CoverListing);
+
+    // Elements Variables
+    this.$CoverSection = $("#realmeow-cover-listing"); // Background
+
+    this.$Cover_Background = this.$CoverSection.find(".background-holder"); // Cover List
+
+    this.$Cover_List = this.$CoverSection.find(".cover-listing-holder"); // Elements
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(CoverListing, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Init STate
+      this.CoverListInit(); // Event that trigger the section effect
+
+      realmeowListener.on("realmeow-cover-listing-anim", function () {
+        _this.CoverTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "CoverListInit",
+    value: function CoverListInit() {
+      // Init State
+      _gsap.TweenMax.set([this.$Cover_Background, this.$Cover_List], {
+        alpha: 0
+      }); // Timeline Animation Build
+
+
+      this.CoverTimeline = new _gsap.TimelineMax({
+        paused: true
+      }); // Start
+
+      this.CoverTimeline.add('anim-start'); // Background Show
+
+      this.CoverTimeline.fromTo(this.$Cover_Background, 0.75, {
+        scale: 1.2,
+        alpha: 0
+      }, {
+        alpha: 1,
+        scale: 1
+      }, 'anim-start');
+      this.CoverTimeline.fromTo(this.$Cover_List, 0.6, {
+        y: window.innerWidth * 0.015,
+        alpha: 0
+      }, {
+        y: 0,
+        alpha: 1
+      }, 'anim-start+=0.35'); //   Start
+
+      this.CoverTimeline.add("anim-start");
+    }
+  }]);
+
+  return CoverListing;
+}();
+
+exports.default = CoverListing;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var TVC =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function TVC() {
+    _classCallCheck(this, TVC);
+
+    // Elements Variables
+    this.$TVCSection = $("#realmeow-tvc-banner"); // Background
+
+    this.$TVCBg = this.$TVCSection.find('.background-holder'); // Play Button
+
+    this.$TVCPlayBtn = this.$TVCSection.find('.play-btn-holder'); // Bind Events
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(TVC, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Banner Effect Setup
+      this.TVCInit();
+      /* Event that trigger the section */
+
+      realmeowListener.on("realmeow-tvc-banner-anim", function () {
+        _this.TVCTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "TVCInit",
+    value: function TVCInit() {
+      // Init State
+      TweenMax.set([this.$TVCBg, this.$TVCPlayBtn], {
+        alpha: 0
+      }); // Apear Animation Timeline Build
+
+      this.TVCTimeline = new TimelineMax({
+        paused: true
+      });
+      this.TVCTimeline.add('anim-start');
+      this.TVCTimeline.to(this.$TVCBg, 0.5, {
+        alpha: 1
+      }, 'anim-start');
+      this.TVCTimeline.fromTo(this.$TVCPlayBtn, 0.3, {
+        alpha: 0,
+        y: window.innerWidth * 0.01
+      }, {
+        alpha: 1,
+        y: 0
+      }, 'anim-start+=0.2');
+    }
+  }]);
+
+  return TVC;
+}();
+
+exports.default = TVC;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var TVC =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function TVC() {
+    _classCallCheck(this, TVC);
+
+    // Elements Variables
+    this.$WhoCallSection = $("#who-call-realmeow"); // Background
+
+    this.$WhoCall_Bg = this.$WhoCallSection.find('.background-holder'); // Main Content
+
+    this.$WhoCall_Content = this.$WhoCallSection.find('.main-content');
+    this.$WhoCall_Content_Children = this.$WhoCall_Content.find('> *'); // Profile
+
+    this.$WhoCall_Profile = this.$WhoCallSection.find('.realmeow-profile');
+    this.$WhoCall_Profile_Children = this.$WhoCall_Profile.find('> *'); // Bind Events
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(TVC, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Banner Effect Setup
+      this.WhoCallInit();
+      /* Event that trigger the section */
+
+      realmeowListener.on("who-call-realmeow-anim", function () {
+        _this.WhoCallTopTimeline.play();
+      });
+      /* Event that trigger the section */
+
+      realmeowListener.on("realmeow-profile-anim", function () {
+        _this.WhoCallProfileTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "WhoCallInit",
+    value: function WhoCallInit() {
+      // Init State
+      TweenMax.set([this.$WhoCall_Bg, this.$WhoCall_Content_Children, this.$WhoCall_Profile_Children], {
+        alpha: 0
+      }); // Apear Animation Timeline Build
+
+      this.WhoCallTopTimeline = new TimelineMax({
+        paused: true
+      }); // Start
+
+      this.WhoCallTopTimeline.add('start'); // Background Show
+
+      this.WhoCallTopTimeline.to(this.$WhoCall_Bg, 0.5, {
+        alpha: 1
+      }, 'anim-start'); // Content Stagger
+
+      this.WhoCallTopTimeline.staggerFromTo(this.$WhoCall_Content_Children, 1, {
+        alpha: 0,
+        y: window.innerWidth * 0.02
+      }, {
+        alpha: 1,
+        y: 0,
+        ease: Power2.easeOut
+      }, 0.2, 'anim-start+=0.25'); // Profile Timeline Animation Build
+
+      this.WhoCallProfileTimeline = new TimelineMax({
+        paused: true
+      });
+      this.WhoCallProfileTimeline.staggerFromTo(this.$WhoCall_Profile_Children, 1, {
+        alpha: 0,
+        y: window.innerWidth * 0.02
+      }, {
+        alpha: 1,
+        y: 0,
+        ease: Power2.easeOut
+      }, 0.2);
+    }
+  }]);
+
+  return TVC;
+}();
+
+exports.default = TVC;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Slogan =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function Slogan() {
+    _classCallCheck(this, Slogan);
+
+    this.PARALLAX_DISTANCE = 10 * window.innerWidth / 1920;
+    this.currentAngle = 1; // Elements Variables
+
+    this.$SloganSection = $("#realmeow-slogan-banner"); // Logo
+
+    this.$Slogan_Logo = this.$SloganSection.find('.realmeow-logo'); // Rotating Effect
+
+    this.$Slogan_Rotating = this.$SloganSection.find('.realmeow-rotating-effect');
+    this.$Slogan_Rotating_Children = this.$Slogan_Rotating.find('>*'); // Slogan Listing
+
+    this.$Slogan_Listing = this.$SloganSection.find('.slogan-listing');
+    this.$Slogan_Listing_Children = this.$Slogan_Listing.find(">*");
+    this.$Slogan_Listing_Shadow = this.$Slogan_Listing.find(".shadow-txt"); // Bind Events
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(Slogan, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Banner Effect Setup
+      this.SloganInit();
+      realmeowListener.on('realmeow-slogan-banner-anim', function () {
+        _this.SloganShowTimeline.play();
+      });
+      realmeowListener.on('realmeow-slogan-banner-hide', function () {
+        clearInterval(_this.RotateInterval);
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "SloganInit",
+    value: function SloganInit() {
+      var _this2 = this;
+
+      // Init State
+      TweenMax.set([this.$Slogan_Logo, this.$Slogan_Rotating, this.$Slogan_Listing_Children, this.$Slogan_Listing_Shadow], {
+        alpha: 0
+      }); // Timeline Build
+
+      this.SloganShowTimeline = new TimelineMax({
+        paused: true,
+        onComplete: function onComplete() {
+          _this2.SetupRotating();
+
+          _this2.DoShadowParallax();
+        }
+      }); // Start
+
+      this.SloganShowTimeline.add('anim-start');
+      this.SloganShowTimeline.fromTo(this.$Slogan_Logo, 0.7, {
+        y: -window.innerWidth * 0.02,
+        scale: 0.7,
+        alpha: 0
+      }, {
+        y: 0,
+        scale: 1,
+        alpha: 1,
+        ease: Power2.easeOut
+      }, 'anim-start');
+      this.SloganShowTimeline.fromTo(this.$Slogan_Rotating, 0.6, {
+        alpha: 0,
+        x: -window.innerWidth * 0.05
+      }, {
+        alpha: 1,
+        x: 0
+      }, 'anim-start+=0.4');
+      this.SloganShowTimeline.staggerFromTo(this.$Slogan_Listing_Children, 0.5, {
+        alpha: 0,
+        x: window.innerWidth * 0.025
+      }, {
+        alpha: 1,
+        x: 0
+      }, 0.15, 'anim-start+=0.6');
+    }
+  }, {
+    key: "SetupRotating",
+    value: function SetupRotating() {
+      var _this3 = this;
+
+      if (this.RotateInterval) {
+        clearInterval(this.RotateInterval);
+      }
+
+      ;
+      this.RotateInterval = setInterval(function () {
+        if (_this3.currentAngle == 8) {
+          _this3.currentAngle = 1;
+        } else {
+          _this3.currentAngle += 1;
+        }
+
+        _this3.$Slogan_Rotating_Children.removeClass('active');
+
+        $(".realmeow-rotating-effect .image-".concat(_this3.currentAngle)).addClass('active');
+      }, 300);
+    }
+  }, {
+    key: "DoShadowParallax",
+    value: function DoShadowParallax() {
+      var _this4 = this;
+
+      TweenMax.to(this.$Slogan_Listing_Shadow, 0.5, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        onComplete: function onComplete() {
+          if (window.innerWidth > 767) {
+            _this4.$SloganSection.on('mousemove', function (e) {
+              var coreData = {
+                offsetX: e.clientX,
+                offsetY: e.clientY,
+                core: {
+                  x: _this4.$SloganSection.width() / 2,
+                  y: _this4.$SloganSection.height() / 2
+                }
+              };
+              var calculatedData = {
+                xMove: _this4.PARALLAX_DISTANCE * (coreData.offsetX - coreData.core.x) / coreData.core.x,
+                yMove: _this4.PARALLAX_DISTANCE * (coreData.offsetY - coreData.core.y) / coreData.core.y
+              };
+              TweenMax.to(_this4.$Slogan_Listing_Shadow, 0.4, {
+                x: -calculatedData.xMove,
+                y: -calculatedData.yMove,
+                ease: Power2.easeOut
+              });
+            });
+          }
+        }
+      });
+    }
+  }]);
+
+  return Slogan;
+}();
+
+exports.default = Slogan;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Power =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function Power() {
+    _classCallCheck(this, Power);
+
+    // Elements Variables
+    this.$PowerSection = $("#realmeow-superpower"); // Background
+
+    this.$Power_Background = this.$PowerSection.find(".background"); // Title
+
+    this.$Power_Title = this.$PowerSection.find(".section-title"); // Wire Frame
+
+    this.$Power_WireFrame = this.$PowerSection.find(".wire-element-holder"); // Power Listing
+
+    this.$Power_Listing = this.$PowerSection.find('.power-listing-holder');
+    this.$Power_Listing_Title = this.$Power_Listing.find('.power-title');
+    this.$Power_Listing_Desc = this.$Power_Listing.find('.power-desc');
+    this.$Power_Listing_Decor = this.$Power_Listing.find('.decor'); // Elements
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(Power, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Init STate
+      this.PowerInit(); // Event that trigger the section effect
+
+      realmeowListener.on("realmeow-superpower-anim", function () {
+        _this.PowerTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "PowerInit",
+    value: function PowerInit() {
+      // Init State
+      TweenMax.set([this.$Power_Background, this.$Power_Title, this.$Power_Listing_Title, this.$Power_Listing_Desc, this.$Power_Listing_Decor, this.$Power_WireFrame], {
+        alpha: 0
+      }); // Animation Timeline Build
+
+      this.PowerTimeline = new TimelineMax({
+        paused: true
+      }); // Start
+
+      this.PowerTimeline.add('anim-start');
+      this.PowerTimeline.to(this.$Power_Background, 0.7, {
+        alpha: 1
+      }, 'anim-start');
+      this.PowerTimeline.fromTo(this.$Power_Title, 0.4, {
+        y: window.innerWidth * 0.02,
+        alpha: 0
+      }, {
+        y: 0,
+        alpha: 1
+      }, 'anim-start+=0.2');
+      this.PowerTimeline.add('bg-show');
+      this.PowerTimeline.to(this.$Power_WireFrame, 0.3, {
+        alpha: 1
+      }, 'bg-show');
+      this.PowerTimeline.fromTo(this.$Power_Listing_Title, 0.4, {
+        alpha: 0,
+        y: window.innerWidth * 0.005
+      }, {
+        alpha: 1,
+        y: 0,
+        ease: Power2.easeOut
+      }, 'bg-show');
+      this.PowerTimeline.to([this.$Power_Listing_Desc, this.$Power_Listing_Decor], 0.4, {
+        alpha: 1
+      }, "-=0.05");
+    }
+  }]);
+
+  return Power;
+}();
+
+exports.default = Power;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Legend =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function Legend() {
+    _classCallCheck(this, Legend);
+
+    // Elements Variables
+    this.$LegendSection = $("#realmeow-the-legend"); // Title
+
+    this.$Legend_Title = $('.title-holder'); // 
+
+    this.$Legend_Intro = $('.legend-intro-layout'); // Elements
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(Legend, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Init STate
+      this.LegendInit(); // Event that trigger the section effect
+
+      realmeowListener.on("realmeow-the-legend-anim", function () {
+        _this.LegendTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "LegendInit",
+    value: function LegendInit() {
+      // Init State
+      TweenMax.set([this.$Legend_Title, this.$Legend_Intro], {
+        alpha: 0
+      }); // Timeline Build
+
+      this.LegendTimeline = new TimelineMax({
+        paused: true
+      });
+      this.LegendTimeline.add('anim-start');
+      this.LegendTimeline.staggerFromTo([this.$Legend_Title, this.$Legend_Intro], 0.5, {
+        y: window.innerWidth * 0.01,
+        alpha: 0
+      }, {
+        alpha: 1,
+        y: 0
+      }, 0.25, 'anim-start');
+    }
+  }]);
+
+  return Legend;
+}();
+
+exports.default = Legend;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Equipment =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function Equipment() {
+    _classCallCheck(this, Equipment);
+
+    // Elements Variables
+    this.$Equipment_Section = $("#realmeow-equipment"); // Title
+
+    this.$Equipment_Title = this.$Equipment_Section.find('.section-title'); // Equip List
+
+    this.$Equipment_List = this.$Equipment_Section.find('.equipment-list');
+    this.$Equipment_List_Children = this.$Equipment_List.find('.equipment-item'); // Elements
+
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(Equipment, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      // Init STate
+      this.EquipmentInit(); // Event that trigger the section effect
+
+      realmeowListener.on("realmeow-equipment-anim", function () {
+        _this.EquipmentTimeline.play();
+      });
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "EquipmentInit",
+    value: function EquipmentInit() {
+      // Init State
+      TweenMax.set([this.$Equipment_Title, this.$Equipment_List_Children], {
+        alpha: 0
+      }); // Animation Timeline Build
+
+      this.EquipmentTimeline = new TimelineMax({
+        paused: true
+      }); // Start
+
+      this.EquipmentTimeline.add('anim-start');
+      this.EquipmentTimeline.fromTo(this.$Equipment_Title, 0.5, {
+        y: window.innerWidth * 0.01,
+        alpha: 0
+      }, {
+        y: 0,
+        alpha: 1
+      }, 'anim-start');
+      this.EquipmentTimeline.staggerFromTo(this.$Equipment_List_Children, 0.5, {
+        y: window.innerWidth * 0.01,
+        alpha: 0
+      }, {
+        y: 0,
+        alpha: 1
+      }, 0.25, 'anim-start+=0.25');
+    }
+  }]);
+
+  return Equipment;
+}();
+
+exports.default = Equipment;
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
